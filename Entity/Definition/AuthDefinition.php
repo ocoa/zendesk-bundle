@@ -10,4 +10,100 @@ namespace ZendeskBundle\Entity\Definition;
  *
  */
 trait AuthDefinition
-{}
+{    
+
+
+	private $emailAddress;    
+
+
+	private $token;    
+
+
+	private $password;    
+
+
+	private $subDomain;    
+
+
+	private $endPoint;    
+
+
+	private $portNUmber;    
+
+	public function setEmailAddress($emailAddress)
+	{
+		$this->emailAddress = $emailAddress;
+		
+		return $this;
+	}
+	
+	public function getEmailAddress()
+	{
+		return $this->emailAddress;
+	}
+    
+
+	public function setToken($token)
+	{
+		$this->token = $token;
+		
+		return $this;
+	}
+	
+	public function getToken()
+	{
+		return $this->token;
+	}
+    
+
+	public function setPassword($password)
+	{
+		$this->password = $password;
+		
+		return $this;
+	}
+	
+	public function getPassword()
+	{
+		return $this->password;
+	}
+    
+
+	public function setSubDomain($subDomain)
+	{
+		$this->subDomain = $subDomain;
+		
+		return $this;
+	}
+	
+	public function getSubDomain()
+	{
+		return $this->subDomain;
+	}
+    
+
+	public function setEndPoint($endPoint)
+	{
+		$this->endPoint = $endPoint;
+		
+		return $this;
+	}
+	
+	public function getEndPoint()
+	{
+		return $this->endPoint;
+	}
+    
+
+	public function setPortNUmber($portNUmber)
+	{
+		$this->portNUmber = $portNUmber;
+		
+		return $this;
+	}
+	
+	public function getPortNUmber()
+	{
+		return $this->portNUmber;
+	}
+}
