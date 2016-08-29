@@ -12,128 +12,222 @@ namespace ZendeskBundle\Entity\Definition;
 trait TicketDefinition
 {    
 
-
-	private $id;    
-
-
-	private $url;    
-
-
+	 /**
+	 * @var string
+	 *
+	 
+	 */
 	private $externalId;    
 
-
+	 /**
+	 * @var string
+	 *
+	 
+	 */
 	private $type;    
 
-
+	 /**
+	 * @var string
+	 *
+	 
+	 */
 	private $subject;    
 
-
+	 /**
+	 * @var string
+	 *
+	 
+	 */
 	private $rawSubject;    
 
-
+	 /**
+	 * @var string
+	 *
+	 
+	 */
 	private $description;    
 
-
+	 /**
+	 * @var string
+	 *
+	 
+	 */
 	private $priority;    
 
-
+	 /**
+	 * @var string
+	 *
+	 
+	 */
 	private $status;    
 
-
+	 /**
+	 * @var string
+	 *
+	 
+	 */
 	private $recipient;    
 
-
+	 /**
+	 * @var integer
+	 *
+	 
+	 */
 	private $requesterId;    
 
-
+	 /**
+	 * @var integer
+	 *
+	 
+	 */
 	private $submitterId;    
 
-
+	 /**
+	 * @var integer
+	 *
+	 
+	 */
 	private $assigneeId;    
 
-
+	 /**
+	 * @var integer
+	 *
+	 
+	 */
 	private $organizationId;    
 
-
-	private $groupId;    
-
-
+	 /**
+	 * @var string
+	 *
+	 
+	 */
 	private $collaboratorIds;    
 
-
+	 /**
+	 * @var integer
+	 *
+	 
+	 */
 	private $forumTopicId;    
 
-
+	 /**
+	 * @var integer
+	 *
+	 
+	 */
 	private $problemId;    
 
-
+	 /**
+	 * @var integer
+	 *
+	 
+	 */
 	private $hasIncidents;    
 
-
+	 /**
+	 * @var datetime
+	 *
+	 
+	 */
 	private $dueAt;    
 
-
+	 /**
+	 * @var string
+	 *
+	 
+	 */
 	private $tags;    
 
-
+	 /**
+	 * @var string
+	 *
+	 
+	 */
 	private $via;    
 
-
+	 /**
+	 * @var string
+	 *
+	 
+	 */
 	private $customFields;    
 
-
+	 /**
+	 * @var string
+	 *
+	 
+	 */
 	private $satisfactionRating;    
 
-
+	 /**
+	 * @var string
+	 *
+	 
+	 */
 	private $sharingAgreementIds;    
 
-
+	 /**
+	 * @var string
+	 *
+	 
+	 */
 	private $followupIds;    
 
-
+	 /**
+	 * @var integer
+	 *
+	 
+	 */
 	private $ticketFormId;    
 
-
+	 /**
+	 * @var integer
+	 *
+	 
+	 */
 	private $brandId;    
 
-
+	 /**
+	 * @var integer
+	 *
+	 
+	 */
 	private $allowChannelback;    
 
-
+	 /**
+	 * @var integer
+	 *
+	 
+	 */
 	private $isPublic;    
 
-
+	 /**
+	 * @var datetime
+	 *
+	 
+	 */
 	private $createdAt;    
 
-
+	 /**
+	 * @var datetime
+	 *
+	 
+	 */
 	private $updatedAt;    
 
-	public function setId($id)
-	{
-		$this->id = $id;
-		
-		return $this;
-	}
-	
-	public function getId()
-	{
-		return $this->id;
-	}
-    
+	 /**
+	 * @var integer
+	 *
+	 
+	 */
+	private $id;    
 
-	public function setUrl($url)
-	{
-		$this->url = $url;
-		
-		return $this;
-	}
-	
-	public function getUrl()
-	{
-		return $this->url;
-	}
-    
-
+	/**
+	 * Set externalId
+	 *
+	 * @param  string $externalId
+	 * @return Ticket
+	 */
 	public function setExternalId($externalId)
 	{
 		$this->externalId = $externalId;
@@ -141,12 +235,24 @@ trait TicketDefinition
 		return $this;
 	}
 	
+	/**
+	 * Get externalId
+	 *
+	 * @return string
+	 */
 	public function getExternalId()
 	{
 		return $this->externalId;
 	}
+
     
 
+	/**
+	 * Set type
+	 *
+	 * @param  string $type
+	 * @return Ticket
+	 */
 	public function setType($type)
 	{
 		$this->type = $type;
@@ -154,12 +260,24 @@ trait TicketDefinition
 		return $this;
 	}
 	
+	/**
+	 * Get type
+	 *
+	 * @return string
+	 */
 	public function getType()
 	{
 		return $this->type;
 	}
+
     
 
+	/**
+	 * Set subject
+	 *
+	 * @param  string $subject
+	 * @return Ticket
+	 */
 	public function setSubject($subject)
 	{
 		$this->subject = $subject;
@@ -167,12 +285,24 @@ trait TicketDefinition
 		return $this;
 	}
 	
+	/**
+	 * Get subject
+	 *
+	 * @return string
+	 */
 	public function getSubject()
 	{
 		return $this->subject;
 	}
+
     
 
+	/**
+	 * Set rawSubject
+	 *
+	 * @param  string $rawSubject
+	 * @return Ticket
+	 */
 	public function setRawSubject($rawSubject)
 	{
 		$this->rawSubject = $rawSubject;
@@ -180,12 +310,24 @@ trait TicketDefinition
 		return $this;
 	}
 	
+	/**
+	 * Get rawSubject
+	 *
+	 * @return string
+	 */
 	public function getRawSubject()
 	{
 		return $this->rawSubject;
 	}
+
     
 
+	/**
+	 * Set description
+	 *
+	 * @param  string $description
+	 * @return Ticket
+	 */
 	public function setDescription($description)
 	{
 		$this->description = $description;
@@ -193,12 +335,24 @@ trait TicketDefinition
 		return $this;
 	}
 	
+	/**
+	 * Get description
+	 *
+	 * @return string
+	 */
 	public function getDescription()
 	{
 		return $this->description;
 	}
+
     
 
+	/**
+	 * Set priority
+	 *
+	 * @param  string $priority
+	 * @return Ticket
+	 */
 	public function setPriority($priority)
 	{
 		$this->priority = $priority;
@@ -206,12 +360,24 @@ trait TicketDefinition
 		return $this;
 	}
 	
+	/**
+	 * Get priority
+	 *
+	 * @return string
+	 */
 	public function getPriority()
 	{
 		return $this->priority;
 	}
+
     
 
+	/**
+	 * Set status
+	 *
+	 * @param  string $status
+	 * @return Ticket
+	 */
 	public function setStatus($status)
 	{
 		$this->status = $status;
@@ -219,12 +385,24 @@ trait TicketDefinition
 		return $this;
 	}
 	
+	/**
+	 * Get status
+	 *
+	 * @return string
+	 */
 	public function getStatus()
 	{
 		return $this->status;
 	}
+
     
 
+	/**
+	 * Set recipient
+	 *
+	 * @param  string $recipient
+	 * @return Ticket
+	 */
 	public function setRecipient($recipient)
 	{
 		$this->recipient = $recipient;
@@ -232,12 +410,24 @@ trait TicketDefinition
 		return $this;
 	}
 	
+	/**
+	 * Get recipient
+	 *
+	 * @return string
+	 */
 	public function getRecipient()
 	{
 		return $this->recipient;
 	}
+
     
 
+	/**
+	 * Set requesterId
+	 *
+	 * @param  integer $requesterId
+	 * @return Ticket
+	 */
 	public function setRequesterId($requesterId)
 	{
 		$this->requesterId = $requesterId;
@@ -245,12 +435,24 @@ trait TicketDefinition
 		return $this;
 	}
 	
+	/**
+	 * Get requesterId
+	 *
+	 * @return integer
+	 */
 	public function getRequesterId()
 	{
 		return $this->requesterId;
 	}
+
     
 
+	/**
+	 * Set submitterId
+	 *
+	 * @param  integer $submitterId
+	 * @return Ticket
+	 */
 	public function setSubmitterId($submitterId)
 	{
 		$this->submitterId = $submitterId;
@@ -258,12 +460,24 @@ trait TicketDefinition
 		return $this;
 	}
 	
+	/**
+	 * Get submitterId
+	 *
+	 * @return integer
+	 */
 	public function getSubmitterId()
 	{
 		return $this->submitterId;
 	}
+
     
 
+	/**
+	 * Set assigneeId
+	 *
+	 * @param  integer $assigneeId
+	 * @return Ticket
+	 */
 	public function setAssigneeId($assigneeId)
 	{
 		$this->assigneeId = $assigneeId;
@@ -271,12 +485,24 @@ trait TicketDefinition
 		return $this;
 	}
 	
+	/**
+	 * Get assigneeId
+	 *
+	 * @return integer
+	 */
 	public function getAssigneeId()
 	{
 		return $this->assigneeId;
 	}
+
     
 
+	/**
+	 * Set organizationId
+	 *
+	 * @param  integer $organizationId
+	 * @return Ticket
+	 */
 	public function setOrganizationId($organizationId)
 	{
 		$this->organizationId = $organizationId;
@@ -284,25 +510,24 @@ trait TicketDefinition
 		return $this;
 	}
 	
+	/**
+	 * Get organizationId
+	 *
+	 * @return integer
+	 */
 	public function getOrganizationId()
 	{
 		return $this->organizationId;
 	}
+
     
 
-	public function setGroupId($groupId)
-	{
-		$this->groupId = $groupId;
-		
-		return $this;
-	}
-	
-	public function getGroupId()
-	{
-		return $this->groupId;
-	}
-    
-
+	/**
+	 * Set collaboratorIds
+	 *
+	 * @param  string $collaboratorIds
+	 * @return Ticket
+	 */
 	public function setCollaboratorIds($collaboratorIds)
 	{
 		$this->collaboratorIds = $collaboratorIds;
@@ -310,12 +535,24 @@ trait TicketDefinition
 		return $this;
 	}
 	
+	/**
+	 * Get collaboratorIds
+	 *
+	 * @return string
+	 */
 	public function getCollaboratorIds()
 	{
 		return $this->collaboratorIds;
 	}
+
     
 
+	/**
+	 * Set forumTopicId
+	 *
+	 * @param  integer $forumTopicId
+	 * @return Ticket
+	 */
 	public function setForumTopicId($forumTopicId)
 	{
 		$this->forumTopicId = $forumTopicId;
@@ -323,12 +560,24 @@ trait TicketDefinition
 		return $this;
 	}
 	
+	/**
+	 * Get forumTopicId
+	 *
+	 * @return integer
+	 */
 	public function getForumTopicId()
 	{
 		return $this->forumTopicId;
 	}
+
     
 
+	/**
+	 * Set problemId
+	 *
+	 * @param  integer $problemId
+	 * @return Ticket
+	 */
 	public function setProblemId($problemId)
 	{
 		$this->problemId = $problemId;
@@ -336,12 +585,24 @@ trait TicketDefinition
 		return $this;
 	}
 	
+	/**
+	 * Get problemId
+	 *
+	 * @return integer
+	 */
 	public function getProblemId()
 	{
 		return $this->problemId;
 	}
+
     
 
+	/**
+	 * Set hasIncidents
+	 *
+	 * @param  integer $hasIncidents
+	 * @return Ticket
+	 */
 	public function setHasIncidents($hasIncidents)
 	{
 		$this->hasIncidents = $hasIncidents;
@@ -349,12 +610,24 @@ trait TicketDefinition
 		return $this;
 	}
 	
+	/**
+	 * Get hasIncidents
+	 *
+	 * @return integer
+	 */
 	public function getHasIncidents()
 	{
 		return $this->hasIncidents;
 	}
+
     
 
+	/**
+	 * Set dueAt
+	 *
+	 * @param  datetime $dueAt
+	 * @return Ticket
+	 */
 	public function setDueAt($dueAt)
 	{
 		$this->dueAt = $dueAt;
@@ -362,12 +635,24 @@ trait TicketDefinition
 		return $this;
 	}
 	
+	/**
+	 * Get dueAt
+	 *
+	 * @return datetime
+	 */
 	public function getDueAt()
 	{
 		return $this->dueAt;
 	}
+
     
 
+	/**
+	 * Set tags
+	 *
+	 * @param  string $tags
+	 * @return Ticket
+	 */
 	public function setTags($tags)
 	{
 		$this->tags = $tags;
@@ -375,12 +660,24 @@ trait TicketDefinition
 		return $this;
 	}
 	
+	/**
+	 * Get tags
+	 *
+	 * @return string
+	 */
 	public function getTags()
 	{
 		return $this->tags;
 	}
+
     
 
+	/**
+	 * Set via
+	 *
+	 * @param  string $via
+	 * @return Ticket
+	 */
 	public function setVia($via)
 	{
 		$this->via = $via;
@@ -388,12 +685,24 @@ trait TicketDefinition
 		return $this;
 	}
 	
+	/**
+	 * Get via
+	 *
+	 * @return string
+	 */
 	public function getVia()
 	{
 		return $this->via;
 	}
+
     
 
+	/**
+	 * Set customFields
+	 *
+	 * @param  string $customFields
+	 * @return Ticket
+	 */
 	public function setCustomFields($customFields)
 	{
 		$this->customFields = $customFields;
@@ -401,12 +710,24 @@ trait TicketDefinition
 		return $this;
 	}
 	
+	/**
+	 * Get customFields
+	 *
+	 * @return string
+	 */
 	public function getCustomFields()
 	{
 		return $this->customFields;
 	}
+
     
 
+	/**
+	 * Set satisfactionRating
+	 *
+	 * @param  string $satisfactionRating
+	 * @return Ticket
+	 */
 	public function setSatisfactionRating($satisfactionRating)
 	{
 		$this->satisfactionRating = $satisfactionRating;
@@ -414,12 +735,24 @@ trait TicketDefinition
 		return $this;
 	}
 	
+	/**
+	 * Get satisfactionRating
+	 *
+	 * @return string
+	 */
 	public function getSatisfactionRating()
 	{
 		return $this->satisfactionRating;
 	}
+
     
 
+	/**
+	 * Set sharingAgreementIds
+	 *
+	 * @param  string $sharingAgreementIds
+	 * @return Ticket
+	 */
 	public function setSharingAgreementIds($sharingAgreementIds)
 	{
 		$this->sharingAgreementIds = $sharingAgreementIds;
@@ -427,12 +760,24 @@ trait TicketDefinition
 		return $this;
 	}
 	
+	/**
+	 * Get sharingAgreementIds
+	 *
+	 * @return string
+	 */
 	public function getSharingAgreementIds()
 	{
 		return $this->sharingAgreementIds;
 	}
+
     
 
+	/**
+	 * Set followupIds
+	 *
+	 * @param  string $followupIds
+	 * @return Ticket
+	 */
 	public function setFollowupIds($followupIds)
 	{
 		$this->followupIds = $followupIds;
@@ -440,12 +785,24 @@ trait TicketDefinition
 		return $this;
 	}
 	
+	/**
+	 * Get followupIds
+	 *
+	 * @return string
+	 */
 	public function getFollowupIds()
 	{
 		return $this->followupIds;
 	}
+
     
 
+	/**
+	 * Set ticketFormId
+	 *
+	 * @param  integer $ticketFormId
+	 * @return Ticket
+	 */
 	public function setTicketFormId($ticketFormId)
 	{
 		$this->ticketFormId = $ticketFormId;
@@ -453,12 +810,24 @@ trait TicketDefinition
 		return $this;
 	}
 	
+	/**
+	 * Get ticketFormId
+	 *
+	 * @return integer
+	 */
 	public function getTicketFormId()
 	{
 		return $this->ticketFormId;
 	}
+
     
 
+	/**
+	 * Set brandId
+	 *
+	 * @param  integer $brandId
+	 * @return Ticket
+	 */
 	public function setBrandId($brandId)
 	{
 		$this->brandId = $brandId;
@@ -466,12 +835,24 @@ trait TicketDefinition
 		return $this;
 	}
 	
+	/**
+	 * Get brandId
+	 *
+	 * @return integer
+	 */
 	public function getBrandId()
 	{
 		return $this->brandId;
 	}
+
     
 
+	/**
+	 * Set allowChannelback
+	 *
+	 * @param  integer $allowChannelback
+	 * @return Ticket
+	 */
 	public function setAllowChannelback($allowChannelback)
 	{
 		$this->allowChannelback = $allowChannelback;
@@ -479,12 +860,24 @@ trait TicketDefinition
 		return $this;
 	}
 	
+	/**
+	 * Get allowChannelback
+	 *
+	 * @return integer
+	 */
 	public function getAllowChannelback()
 	{
 		return $this->allowChannelback;
 	}
+
     
 
+	/**
+	 * Set isPublic
+	 *
+	 * @param  integer $isPublic
+	 * @return Ticket
+	 */
 	public function setIsPublic($isPublic)
 	{
 		$this->isPublic = $isPublic;
@@ -492,12 +885,24 @@ trait TicketDefinition
 		return $this;
 	}
 	
+	/**
+	 * Get isPublic
+	 *
+	 * @return integer
+	 */
 	public function getIsPublic()
 	{
 		return $this->isPublic;
 	}
+
     
 
+	/**
+	 * Set createdAt
+	 *
+	 * @param  datetime $createdAt
+	 * @return Ticket
+	 */
 	public function setCreatedAt($createdAt)
 	{
 		$this->createdAt = $createdAt;
@@ -505,12 +910,24 @@ trait TicketDefinition
 		return $this;
 	}
 	
+	/**
+	 * Get createdAt
+	 *
+	 * @return datetime
+	 */
 	public function getCreatedAt()
 	{
 		return $this->createdAt;
 	}
+
     
 
+	/**
+	 * Set updatedAt
+	 *
+	 * @param  datetime $updatedAt
+	 * @return Ticket
+	 */
 	public function setUpdatedAt($updatedAt)
 	{
 		$this->updatedAt = $updatedAt;
@@ -518,8 +935,39 @@ trait TicketDefinition
 		return $this;
 	}
 	
+	/**
+	 * Get updatedAt
+	 *
+	 * @return datetime
+	 */
 	public function getUpdatedAt()
 	{
 		return $this->updatedAt;
 	}
+
+    
+
+	/**
+	 * Set id
+	 *
+	 * @param  integer $id
+	 * @return Ticket
+	 */
+	public function setId($id)
+	{
+		$this->id = $id;
+		
+		return $this;
+	}
+	
+	/**
+	 * Get id
+	 *
+	 * @return integer
+	 */
+	public function getId()
+	{
+		return $this->id;
+	}
+
 }
