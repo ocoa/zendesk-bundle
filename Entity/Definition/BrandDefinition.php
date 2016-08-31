@@ -17,98 +17,151 @@ trait BrandDefinition
 	 *
 	 
 	 */
-	private $id;    
+	
+	private $id;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $name;    
+	
+	private $name;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $brandUrl;    
-
-	 /**
-	 * @var integer
-	 *
-	 
-	 */
-	private $hasHelpCenter;    
-
-	 /**
-	 * @var string
-	 *
-	 
-	 */
-	private $helpCenterState;    
-
-	 /**
-	 * @var integer
-	 *
-	 
-	 */
-	private $active;    
-
-	 /**
-	 * @var integer
-	 *
-	 
-	 */
-	private $default;    
+	
+	private $brandUrl;
+	
+    
 
 	 /**
 	 * @var blob
 	 *
 	 
 	 */
-	private $logo;    
+	
+	private $hasHelpCenter;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $ticketFromIds;    
+	
+	private $helpCenterState;
+	
+    
+
+	 /**
+	 * @var blob
+	 *
+	 
+	 */
+	
+	private $active;
+	
+    
+
+	 /**
+	 * @var blob
+	 *
+	 
+	 */
+	
+	private $default;
+	
+    
+
+	 /**
+	 * @var blob
+	 *
+	 
+	 */
+	
+	private $logo;
+	
+    
+
+	 /**
+	 * @var Array
+	 *
+	 
+	 */
+	
+	private $ticketFromIds;
+	
+    
 
 	 /**
 	 * @var datetime
 	 *
 	 
 	 */
-	private $createdId;    
+	
+	private $createdId;
+	
+    
 
 	 /**
 	 * @var datetime
 	 *
 	 
 	 */
-	private $updatedAt;    
+	
+	private $updatedAt;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $subdomain;    
+	
+	private $subdomain;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $hostMapping;    
+	
+	private $hostMapping;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $signatureTemplate;    
+	
+	private $signatureTemplate;
+	
+    
+
+	
+	/**
+	 * Get id
+	 *
+	 * @return integer
+	 */
+	public function getId()
+	{
+		return $this->id;
+	}
 
 	/**
 	 * Set id
@@ -121,19 +174,19 @@ trait BrandDefinition
 		$this->id = $id;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get id
+	 * Get name
 	 *
-	 * @return integer
+	 * @return string
 	 */
-	public function getId()
+	public function getName()
 	{
-		return $this->id;
+		return $this->name;
 	}
-
-    
 
 	/**
 	 * Set name
@@ -146,19 +199,19 @@ trait BrandDefinition
 		$this->name = $name;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get name
+	 * Get brandUrl
 	 *
 	 * @return string
 	 */
-	public function getName()
+	public function getBrandUrl()
 	{
-		return $this->name;
+		return $this->brandUrl;
 	}
-
-    
 
 	/**
 	 * Set brandUrl
@@ -171,24 +224,24 @@ trait BrandDefinition
 		$this->brandUrl = $brandUrl;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get brandUrl
+	 * Get hasHelpCenter
 	 *
-	 * @return string
+	 * @return blob
 	 */
-	public function getBrandUrl()
+	public function getHasHelpCenter()
 	{
-		return $this->brandUrl;
+		return $this->hasHelpCenter;
 	}
-
-    
 
 	/**
 	 * Set hasHelpCenter
 	 *
-	 * @param  integer $hasHelpCenter
+	 * @param  blob $hasHelpCenter
 	 * @return Brand
 	 */
 	public function setHasHelpCenter($hasHelpCenter)
@@ -196,19 +249,19 @@ trait BrandDefinition
 		$this->hasHelpCenter = $hasHelpCenter;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get hasHelpCenter
+	 * Get helpCenterState
 	 *
-	 * @return integer
+	 * @return string
 	 */
-	public function getHasHelpCenter()
+	public function getHelpCenterState()
 	{
-		return $this->hasHelpCenter;
+		return $this->helpCenterState;
 	}
-
-    
 
 	/**
 	 * Set helpCenterState
@@ -221,24 +274,24 @@ trait BrandDefinition
 		$this->helpCenterState = $helpCenterState;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get helpCenterState
+	 * Get active
 	 *
-	 * @return string
+	 * @return blob
 	 */
-	public function getHelpCenterState()
+	public function getActive()
 	{
-		return $this->helpCenterState;
+		return $this->active;
 	}
-
-    
 
 	/**
 	 * Set active
 	 *
-	 * @param  integer $active
+	 * @param  blob $active
 	 * @return Brand
 	 */
 	public function setActive($active)
@@ -246,24 +299,24 @@ trait BrandDefinition
 		$this->active = $active;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get active
+	 * Get default
 	 *
-	 * @return integer
+	 * @return blob
 	 */
-	public function getActive()
+	public function getDefault()
 	{
-		return $this->active;
+		return $this->default;
 	}
-
-    
 
 	/**
 	 * Set default
 	 *
-	 * @param  integer $default
+	 * @param  blob $default
 	 * @return Brand
 	 */
 	public function setDefault($default)
@@ -271,19 +324,19 @@ trait BrandDefinition
 		$this->default = $default;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get default
+	 * Get logo
 	 *
-	 * @return integer
+	 * @return blob
 	 */
-	public function getDefault()
+	public function getLogo()
 	{
-		return $this->default;
+		return $this->logo;
 	}
-
-    
 
 	/**
 	 * Set logo
@@ -296,24 +349,46 @@ trait BrandDefinition
 		$this->logo = $logo;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get logo
-	 *
-	 * @return blob
+	 * Add elem
+	 * @param mixed $elem
+	 * @return Brand
 	 */
-	public function getLogo()
+	public function addTicketFromIds($elem)
 	{
-		return $this->logo;
+		$this->ticketFromIds[] = $elem;
+		return $this;
 	}
 
-    
+	/**
+	 * Has elem
+	 * @param mixed $elem
+	 * @return boolean
+	 */
+	public function hasTicketFromIds($elem)
+	{
+		return in_array($elem, $this->ticketFromIds);
+	}
+	
+	
+	/**
+	 * Get ticketFromIds
+	 *
+	 * @return Array
+	 */
+	public function getTicketFromIds()
+	{
+		return $this->ticketFromIds;
+	}
 
 	/**
 	 * Set ticketFromIds
 	 *
-	 * @param  string $ticketFromIds
+	 * @param  Array $ticketFromIds
 	 * @return Brand
 	 */
 	public function setTicketFromIds($ticketFromIds)
@@ -321,19 +396,19 @@ trait BrandDefinition
 		$this->ticketFromIds = $ticketFromIds;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get ticketFromIds
+	 * Get createdId
 	 *
-	 * @return string
+	 * @return datetime
 	 */
-	public function getTicketFromIds()
+	public function getCreatedId()
 	{
-		return $this->ticketFromIds;
+		return $this->createdId;
 	}
-
-    
 
 	/**
 	 * Set createdId
@@ -346,19 +421,19 @@ trait BrandDefinition
 		$this->createdId = $createdId;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get createdId
+	 * Get updatedAt
 	 *
 	 * @return datetime
 	 */
-	public function getCreatedId()
+	public function getUpdatedAt()
 	{
-		return $this->createdId;
+		return $this->updatedAt;
 	}
-
-    
 
 	/**
 	 * Set updatedAt
@@ -371,19 +446,19 @@ trait BrandDefinition
 		$this->updatedAt = $updatedAt;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get updatedAt
+	 * Get subdomain
 	 *
-	 * @return datetime
+	 * @return string
 	 */
-	public function getUpdatedAt()
+	public function getSubdomain()
 	{
-		return $this->updatedAt;
+		return $this->subdomain;
 	}
-
-    
 
 	/**
 	 * Set subdomain
@@ -396,19 +471,19 @@ trait BrandDefinition
 		$this->subdomain = $subdomain;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get subdomain
+	 * Get hostMapping
 	 *
 	 * @return string
 	 */
-	public function getSubdomain()
+	public function getHostMapping()
 	{
-		return $this->subdomain;
+		return $this->hostMapping;
 	}
-
-    
 
 	/**
 	 * Set hostMapping
@@ -421,19 +496,19 @@ trait BrandDefinition
 		$this->hostMapping = $hostMapping;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get hostMapping
+	 * Get signatureTemplate
 	 *
 	 * @return string
 	 */
-	public function getHostMapping()
+	public function getSignatureTemplate()
 	{
-		return $this->hostMapping;
+		return $this->signatureTemplate;
 	}
-
-    
 
 	/**
 	 * Set signatureTemplate
@@ -446,16 +521,5 @@ trait BrandDefinition
 		$this->signatureTemplate = $signatureTemplate;
 		
 		return $this;
-	}
-	
-	/**
-	 * Get signatureTemplate
-	 *
-	 * @return string
-	 */
-	public function getSignatureTemplate()
-	{
-		return $this->signatureTemplate;
-	}
-
+	}	
 }

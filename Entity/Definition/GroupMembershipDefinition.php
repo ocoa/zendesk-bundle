@@ -6,10 +6,10 @@
 namespace ZendeskBundle\Entity\Definition;
 
 /**
- * Definition class for the GroupMemberships connector object
+ * Definition class for the GroupMembership connector object
  *
  */
-trait GroupMembershipsDefinition
+trait GroupMembershipDefinition
 {    
 
 	 /**
@@ -17,62 +17,71 @@ trait GroupMembershipsDefinition
 	 *
 	 
 	 */
-	private $id;    
+	
+	private $id;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $url;    
+	
+	private $url;
+	
+    
 
 	 /**
 	 * @var datetime
 	 *
 	 
 	 */
-	private $createdAt;    
+	
+	private $createdAt;
+	
+    
 
 	 /**
 	 * @var datetime
 	 *
 	 
 	 */
-	private $updatedAt;    
+	
+	private $updatedAt;
+	
+    
 
 	 /**
 	 * @var integer
 	 *
 	 
 	 */
-	private $userId;    
+	
+	private $userId;
+	
+    
 
 	 /**
 	 * @var integer
 	 *
 	 
 	 */
-	private $groupId;    
+	
+	private $groupId;
+	
+    
 
 	 /**
-	 * @var integer
+	 * @var blob
 	 *
 	 
 	 */
-	private $default;    
+	
+	private $default;
+	
+    
 
-	/**
-	 * Set id
-	 *
-	 * @param  integer $id
-	 * @return GroupMemberships
-	 */
-	public function setId($id)
-	{
-		$this->id = $id;
-		
-		return $this;
-	}
 	
 	/**
 	 * Get id
@@ -84,20 +93,20 @@ trait GroupMembershipsDefinition
 		return $this->id;
 	}
 
-    
-
 	/**
-	 * Set url
+	 * Set id
 	 *
-	 * @param  string $url
-	 * @return GroupMemberships
+	 * @param  integer $id
+	 * @return GroupMembership
 	 */
-	public function setUrl($url)
+	public function setId($id)
 	{
-		$this->url = $url;
+		$this->id = $id;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
 	 * Get url
@@ -109,20 +118,20 @@ trait GroupMembershipsDefinition
 		return $this->url;
 	}
 
-    
-
 	/**
-	 * Set createdAt
+	 * Set url
 	 *
-	 * @param  datetime $createdAt
-	 * @return GroupMemberships
+	 * @param  string $url
+	 * @return GroupMembership
 	 */
-	public function setCreatedAt($createdAt)
+	public function setUrl($url)
 	{
-		$this->createdAt = $createdAt;
+		$this->url = $url;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
 	 * Get createdAt
@@ -134,20 +143,20 @@ trait GroupMembershipsDefinition
 		return $this->createdAt;
 	}
 
-    
-
 	/**
-	 * Set updatedAt
+	 * Set createdAt
 	 *
-	 * @param  datetime $updatedAt
-	 * @return GroupMemberships
+	 * @param  datetime $createdAt
+	 * @return GroupMembership
 	 */
-	public function setUpdatedAt($updatedAt)
+	public function setCreatedAt($createdAt)
 	{
-		$this->updatedAt = $updatedAt;
+		$this->createdAt = $createdAt;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
 	 * Get updatedAt
@@ -159,20 +168,20 @@ trait GroupMembershipsDefinition
 		return $this->updatedAt;
 	}
 
-    
-
 	/**
-	 * Set userId
+	 * Set updatedAt
 	 *
-	 * @param  integer $userId
-	 * @return GroupMemberships
+	 * @param  datetime $updatedAt
+	 * @return GroupMembership
 	 */
-	public function setUserId($userId)
+	public function setUpdatedAt($updatedAt)
 	{
-		$this->userId = $userId;
+		$this->updatedAt = $updatedAt;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
 	 * Get userId
@@ -184,20 +193,20 @@ trait GroupMembershipsDefinition
 		return $this->userId;
 	}
 
-    
-
 	/**
-	 * Set groupId
+	 * Set userId
 	 *
-	 * @param  integer $groupId
-	 * @return GroupMemberships
+	 * @param  integer $userId
+	 * @return GroupMembership
 	 */
-	public function setGroupId($groupId)
+	public function setUserId($userId)
 	{
-		$this->groupId = $groupId;
+		$this->userId = $userId;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
 	 * Get groupId
@@ -209,29 +218,41 @@ trait GroupMembershipsDefinition
 		return $this->groupId;
 	}
 
-    
-
 	/**
-	 * Set default
+	 * Set groupId
 	 *
-	 * @param  integer $default
-	 * @return GroupMemberships
+	 * @param  integer $groupId
+	 * @return GroupMembership
 	 */
-	public function setDefault($default)
+	public function setGroupId($groupId)
 	{
-		$this->default = $default;
+		$this->groupId = $groupId;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
 	 * Get default
 	 *
-	 * @return integer
+	 * @return blob
 	 */
 	public function getDefault()
 	{
 		return $this->default;
 	}
 
+	/**
+	 * Set default
+	 *
+	 * @param  blob $default
+	 * @return GroupMembership
+	 */
+	public function setDefault($default)
+	{
+		$this->default = $default;
+		
+		return $this;
+	}	
 }

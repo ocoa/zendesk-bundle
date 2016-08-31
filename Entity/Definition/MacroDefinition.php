@@ -17,56 +17,91 @@ trait MacroDefinition
 	 *
 	 
 	 */
-	private $id;    
+	
+	private $id;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $title;    
+	
+	private $title;
+	
+    
+
+	 /**
+	 * @var blob
+	 *
+	 
+	 */
+	
+	private $active;
+	
+    
 
 	 /**
 	 * @var integer
 	 *
 	 
 	 */
-	private $active;    
+	
+	private $position;
+	
+    
 
 	 /**
-	 * @var integer
+	 * @var Object
 	 *
 	 
 	 */
-	private $position;    
+	
+	private $restriction;
+	
+    
 
 	 /**
-	 * @var string
+	 * @var Object
 	 *
 	 
 	 */
-	private $restriction;    
-
-	 /**
-	 * @var string
-	 *
-	 
-	 */
-	private $actions;    
-
-	 /**
-	 * @var datetime
-	 *
-	 
-	 */
-	private $createdAt;    
+	
+	private $actions;
+	
+    
 
 	 /**
 	 * @var datetime
 	 *
 	 
 	 */
-	private $updatedAt;    
+	
+	private $createdAt;
+	
+    
+
+	 /**
+	 * @var datetime
+	 *
+	 
+	 */
+	
+	private $updatedAt;
+	
+    
+
+	
+	/**
+	 * Get id
+	 *
+	 * @return integer
+	 */
+	public function getId()
+	{
+		return $this->id;
+	}
 
 	/**
 	 * Set id
@@ -79,19 +114,19 @@ trait MacroDefinition
 		$this->id = $id;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get id
+	 * Get title
 	 *
-	 * @return integer
+	 * @return string
 	 */
-	public function getId()
+	public function getTitle()
 	{
-		return $this->id;
+		return $this->title;
 	}
-
-    
 
 	/**
 	 * Set title
@@ -104,24 +139,24 @@ trait MacroDefinition
 		$this->title = $title;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get title
+	 * Get active
 	 *
-	 * @return string
+	 * @return blob
 	 */
-	public function getTitle()
+	public function getActive()
 	{
-		return $this->title;
+		return $this->active;
 	}
-
-    
 
 	/**
 	 * Set active
 	 *
-	 * @param  integer $active
+	 * @param  blob $active
 	 * @return Macro
 	 */
 	public function setActive($active)
@@ -129,19 +164,19 @@ trait MacroDefinition
 		$this->active = $active;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get active
+	 * Get position
 	 *
 	 * @return integer
 	 */
-	public function getActive()
+	public function getPosition()
 	{
-		return $this->active;
+		return $this->position;
 	}
-
-    
 
 	/**
 	 * Set position
@@ -154,24 +189,24 @@ trait MacroDefinition
 		$this->position = $position;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get position
+	 * Get restriction
 	 *
-	 * @return integer
+	 * @return Object
 	 */
-	public function getPosition()
+	public function getRestriction()
 	{
-		return $this->position;
+		return $this->restriction;
 	}
-
-    
 
 	/**
 	 * Set restriction
 	 *
-	 * @param  string $restriction
+	 * @param  Object $restriction
 	 * @return Macro
 	 */
 	public function setRestriction($restriction)
@@ -179,24 +214,24 @@ trait MacroDefinition
 		$this->restriction = $restriction;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get restriction
+	 * Get actions
 	 *
-	 * @return string
+	 * @return Object
 	 */
-	public function getRestriction()
+	public function getActions()
 	{
-		return $this->restriction;
+		return $this->actions;
 	}
-
-    
 
 	/**
 	 * Set actions
 	 *
-	 * @param  string $actions
+	 * @param  Object $actions
 	 * @return Macro
 	 */
 	public function setActions($actions)
@@ -204,19 +239,19 @@ trait MacroDefinition
 		$this->actions = $actions;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get actions
+	 * Get createdAt
 	 *
-	 * @return string
+	 * @return datetime
 	 */
-	public function getActions()
+	public function getCreatedAt()
 	{
-		return $this->actions;
+		return $this->createdAt;
 	}
-
-    
 
 	/**
 	 * Set createdAt
@@ -229,19 +264,19 @@ trait MacroDefinition
 		$this->createdAt = $createdAt;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get createdAt
+	 * Get updatedAt
 	 *
 	 * @return datetime
 	 */
-	public function getCreatedAt()
+	public function getUpdatedAt()
 	{
-		return $this->createdAt;
+		return $this->updatedAt;
 	}
-
-    
 
 	/**
 	 * Set updatedAt
@@ -254,16 +289,5 @@ trait MacroDefinition
 		$this->updatedAt = $updatedAt;
 		
 		return $this;
-	}
-	
-	/**
-	 * Get updatedAt
-	 *
-	 * @return datetime
-	 */
-	public function getUpdatedAt()
-	{
-		return $this->updatedAt;
-	}
-
+	}	
 }

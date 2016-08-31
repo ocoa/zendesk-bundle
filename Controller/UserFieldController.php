@@ -2,7 +2,7 @@
 
 namespace ZendeskBundle\Controller;
 
-use ZendeskBundle\Entity\User;
+use ZendeskBundle\Entity\UserField;
 
 use ZendeskBundle\Utils\ControllerAbstract;
 use ZendeskBundle\Utils\EntityHandling;
@@ -10,45 +10,45 @@ use ZendeskBundle\Utils\EntityHandling;
 use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
-class UserController extends ControllerAbstract
+class UserFieldController extends ControllerAbstract
 {
     use EntityHandling;
 
     /**
-     * @Route("/add/user", name="add_user")
+     * @Route("/add/user_field", name="add_user_field")
      */
-    public function addUserAction(Request $request)
+    public function addUserFieldAction(Request $request)
     {    
-        $object = new User();
+        $object = new UserField();
         $object = $object->persist();
         $data = $this->convertEntity($object);
         return $this->createJsonResponse($data);
     }
 
     /**
-    * @Route("/get/user/{id}", name="get_user")
+    * @Route("/get/user_field/{id}", name="get_user_field")
     */
-    public function readUserAction($id)
+    public function readUserFieldAction($id)
     {
-        $object = new User($id);
+        $object = new UserField($id);
         $data = $this->convertEntity($object);
         return $this->createJsonResponse($data);
     }
 
 	/**
-	* @Route("/update/user/{id}", name="update_user")
+	* @Route("/update/user_field/{id}", name="update_user_field")
 	*/
-    public function updateUserAction($id)
+    public function updateUserFieldAction($id)
     {
 
     }
 
     /**
-    * @Route("/delete/user/{id}", name="delete_user")
+    * @Route("/delete/user_field/{id}", name="delete_user_field")
     */
-    public function deleteUserAction($ticket_id)
+    public function deleteUserFieldAction($ticket_id)
     {
-        $object = new User($id);
+        $object = new UserField($id);
         $object->remove();
         $object->persist();  
         return $this->createJsonResponse(1);     

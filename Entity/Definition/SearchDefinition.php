@@ -17,28 +17,51 @@ trait SearchDefinition
 	 *
 	 
 	 */
-	private $count;    
+	
+	private $count;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $nextPage;    
+	
+	private $nextPage;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $prevPage;    
+	
+	private $prevPage;
+	
+    
 
 	 /**
-	 * @var string
+	 * @var Array
 	 *
 	 
 	 */
-	private $results;    
+	
+	private $results;
+	
+    
+
+	
+	/**
+	 * Get count
+	 *
+	 * @return integer
+	 */
+	public function getCount()
+	{
+		return $this->count;
+	}
 
 	/**
 	 * Set count
@@ -51,19 +74,19 @@ trait SearchDefinition
 		$this->count = $count;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get count
+	 * Get nextPage
 	 *
-	 * @return integer
+	 * @return string
 	 */
-	public function getCount()
+	public function getNextPage()
 	{
-		return $this->count;
+		return $this->nextPage;
 	}
-
-    
 
 	/**
 	 * Set nextPage
@@ -76,19 +99,19 @@ trait SearchDefinition
 		$this->nextPage = $nextPage;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get nextPage
+	 * Get prevPage
 	 *
 	 * @return string
 	 */
-	public function getNextPage()
+	public function getPrevPage()
 	{
-		return $this->nextPage;
+		return $this->prevPage;
 	}
-
-    
 
 	/**
 	 * Set prevPage
@@ -101,24 +124,46 @@ trait SearchDefinition
 		$this->prevPage = $prevPage;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get prevPage
-	 *
-	 * @return string
+	 * Add elem
+	 * @param mixed $elem
+	 * @return Search
 	 */
-	public function getPrevPage()
+	public function addResults($elem)
 	{
-		return $this->prevPage;
+		$this->results[] = $elem;
+		return $this;
 	}
 
-    
+	/**
+	 * Has elem
+	 * @param mixed $elem
+	 * @return boolean
+	 */
+	public function hasResults($elem)
+	{
+		return in_array($elem, $this->results);
+	}
+	
+	
+	/**
+	 * Get results
+	 *
+	 * @return Array
+	 */
+	public function getResults()
+	{
+		return $this->results;
+	}
 
 	/**
 	 * Set results
 	 *
-	 * @param  string $results
+	 * @param  Array $results
 	 * @return Search
 	 */
 	public function setResults($results)
@@ -126,16 +171,5 @@ trait SearchDefinition
 		$this->results = $results;
 		
 		return $this;
-	}
-	
-	/**
-	 * Get results
-	 *
-	 * @return string
-	 */
-	public function getResults()
-	{
-		return $this->results;
-	}
-
+	}	
 }

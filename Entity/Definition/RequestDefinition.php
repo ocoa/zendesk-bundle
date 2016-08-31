@@ -13,163 +13,262 @@ trait RequestDefinition
 {    
 
 	 /**
-	 * @var string
+	 * @var Array
 	 *
 	 
 	 */
-	private $customFields;    
+	
+	private $customFields;
+	
+    
 
 	 /**
 	 * @var integer
 	 *
 	 
 	 */
-	private $organizationId;    
+	
+	private $organizationId;
+	
+    
 
 	 /**
 	 * @var integer
 	 *
 	 
 	 */
-	private $requesterId;    
+	
+	private $requesterId;
+	
+    
 
 	 /**
 	 * @var integer
 	 *
 	 
 	 */
-	private $assigneeId;    
+	
+	private $assigneeId;
+	
+    
 
 	 /**
 	 * @var integer
 	 *
 	 
 	 */
-	private $groupId;    
+	
+	private $groupId;
+	
+    
 
 	 /**
-	 * @var string
+	 * @var Array
 	 *
 	 
 	 */
-	private $collaboratorIds;    
+	
+	private $collaboratorIds;
+	
+    
 
 	 /**
-	 * @var string
+	 * @var Object
 	 *
 	 
 	 */
-	private $via;    
+	
+	private $via;
+	
+    
 
 	 /**
 	 * @var datetime
 	 *
 	 
 	 */
-	private $dueAt;    
+	
+	private $dueAt;
+	
+    
+
+	 /**
+	 * @var blob
+	 *
+	 
+	 */
+	
+	private $canBeSolvedByMe;
+	
+    
+
+	 /**
+	 * @var blob
+	 *
+	 
+	 */
+	
+	private $solved;
+	
+    
 
 	 /**
 	 * @var integer
 	 *
 	 
 	 */
-	private $canBeSolvedByMe;    
-
-	 /**
-	 * @var integer
-	 *
-	 
-	 */
-	private $solved;    
-
-	 /**
-	 * @var integer
-	 *
-	 
-	 */
-	private $ticketFromId;    
+	
+	private $ticketFromId;
+	
+    
 
 	 /**
 	 * @var datetime
 	 *
 	 
 	 */
-	private $createdAt;    
+	
+	private $createdAt;
+	
+    
 
 	 /**
 	 * @var datetime
 	 *
 	 
 	 */
-	private $updatedAt;    
+	
+	private $updatedAt;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $recepient;    
+	
+	private $recepient;
+	
+    
 
 	 /**
 	 * @var integer
 	 *
 	 
 	 */
-	private $followupSourceId;    
+	
+	private $followupSourceId;
+	
+    
 
 	 /**
 	 * @var integer
 	 *
 	 
 	 */
-	private $id;    
+	
+	private $id;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $url;    
+	
+	private $url;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $subject;    
+	
+	private $subject;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $description;    
+	
+	private $description;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $status;    
+	
+	private $status;
+	
+    
+
+	 /**
+	 * @var Object
+	 *
+	 
+	 */
+	
+	private $priority;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $priority;    
+	
+	private $type;
+	
+    
 
-	 /**
-	 * @var string
-	 *
-	 
+	
+	/**
+	 * Add elem
+	 * @param mixed $elem
+	 * @return Request
 	 */
-	private $type;    
+	public function addCustomFields($elem)
+	{
+		$this->customFields[] = $elem;
+		return $this;
+	}
+
+	/**
+	 * Has elem
+	 * @param mixed $elem
+	 * @return boolean
+	 */
+	public function hasCustomFields($elem)
+	{
+		return in_array($elem, $this->customFields);
+	}
+	
+	
+	/**
+	 * Get customFields
+	 *
+	 * @return Array
+	 */
+	public function getCustomFields()
+	{
+		return $this->customFields;
+	}
 
 	/**
 	 * Set customFields
 	 *
-	 * @param  string $customFields
+	 * @param  Array $customFields
 	 * @return Request
 	 */
 	public function setCustomFields($customFields)
@@ -177,19 +276,19 @@ trait RequestDefinition
 		$this->customFields = $customFields;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get customFields
+	 * Get organizationId
 	 *
-	 * @return string
+	 * @return integer
 	 */
-	public function getCustomFields()
+	public function getOrganizationId()
 	{
-		return $this->customFields;
+		return $this->organizationId;
 	}
-
-    
 
 	/**
 	 * Set organizationId
@@ -202,19 +301,19 @@ trait RequestDefinition
 		$this->organizationId = $organizationId;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get organizationId
+	 * Get requesterId
 	 *
 	 * @return integer
 	 */
-	public function getOrganizationId()
+	public function getRequesterId()
 	{
-		return $this->organizationId;
+		return $this->requesterId;
 	}
-
-    
 
 	/**
 	 * Set requesterId
@@ -227,19 +326,19 @@ trait RequestDefinition
 		$this->requesterId = $requesterId;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get requesterId
+	 * Get assigneeId
 	 *
 	 * @return integer
 	 */
-	public function getRequesterId()
+	public function getAssigneeId()
 	{
-		return $this->requesterId;
+		return $this->assigneeId;
 	}
-
-    
 
 	/**
 	 * Set assigneeId
@@ -252,19 +351,19 @@ trait RequestDefinition
 		$this->assigneeId = $assigneeId;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get assigneeId
+	 * Get groupId
 	 *
 	 * @return integer
 	 */
-	public function getAssigneeId()
+	public function getGroupId()
 	{
-		return $this->assigneeId;
+		return $this->groupId;
 	}
-
-    
 
 	/**
 	 * Set groupId
@@ -277,24 +376,46 @@ trait RequestDefinition
 		$this->groupId = $groupId;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get groupId
-	 *
-	 * @return integer
+	 * Add elem
+	 * @param mixed $elem
+	 * @return Request
 	 */
-	public function getGroupId()
+	public function addCollaboratorIds($elem)
 	{
-		return $this->groupId;
+		$this->collaboratorIds[] = $elem;
+		return $this;
 	}
 
-    
+	/**
+	 * Has elem
+	 * @param mixed $elem
+	 * @return boolean
+	 */
+	public function hasCollaboratorIds($elem)
+	{
+		return in_array($elem, $this->collaboratorIds);
+	}
+	
+	
+	/**
+	 * Get collaboratorIds
+	 *
+	 * @return Array
+	 */
+	public function getCollaboratorIds()
+	{
+		return $this->collaboratorIds;
+	}
 
 	/**
 	 * Set collaboratorIds
 	 *
-	 * @param  string $collaboratorIds
+	 * @param  Array $collaboratorIds
 	 * @return Request
 	 */
 	public function setCollaboratorIds($collaboratorIds)
@@ -302,24 +423,24 @@ trait RequestDefinition
 		$this->collaboratorIds = $collaboratorIds;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get collaboratorIds
+	 * Get via
 	 *
-	 * @return string
+	 * @return Object
 	 */
-	public function getCollaboratorIds()
+	public function getVia()
 	{
-		return $this->collaboratorIds;
+		return $this->via;
 	}
-
-    
 
 	/**
 	 * Set via
 	 *
-	 * @param  string $via
+	 * @param  Object $via
 	 * @return Request
 	 */
 	public function setVia($via)
@@ -327,19 +448,19 @@ trait RequestDefinition
 		$this->via = $via;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get via
+	 * Get dueAt
 	 *
-	 * @return string
+	 * @return datetime
 	 */
-	public function getVia()
+	public function getDueAt()
 	{
-		return $this->via;
+		return $this->dueAt;
 	}
-
-    
 
 	/**
 	 * Set dueAt
@@ -352,24 +473,24 @@ trait RequestDefinition
 		$this->dueAt = $dueAt;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get dueAt
+	 * Get canBeSolvedByMe
 	 *
-	 * @return datetime
+	 * @return blob
 	 */
-	public function getDueAt()
+	public function getCanBeSolvedByMe()
 	{
-		return $this->dueAt;
+		return $this->canBeSolvedByMe;
 	}
-
-    
 
 	/**
 	 * Set canBeSolvedByMe
 	 *
-	 * @param  integer $canBeSolvedByMe
+	 * @param  blob $canBeSolvedByMe
 	 * @return Request
 	 */
 	public function setCanBeSolvedByMe($canBeSolvedByMe)
@@ -377,24 +498,24 @@ trait RequestDefinition
 		$this->canBeSolvedByMe = $canBeSolvedByMe;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get canBeSolvedByMe
+	 * Get solved
 	 *
-	 * @return integer
+	 * @return blob
 	 */
-	public function getCanBeSolvedByMe()
+	public function getSolved()
 	{
-		return $this->canBeSolvedByMe;
+		return $this->solved;
 	}
-
-    
 
 	/**
 	 * Set solved
 	 *
-	 * @param  integer $solved
+	 * @param  blob $solved
 	 * @return Request
 	 */
 	public function setSolved($solved)
@@ -402,19 +523,19 @@ trait RequestDefinition
 		$this->solved = $solved;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get solved
+	 * Get ticketFromId
 	 *
 	 * @return integer
 	 */
-	public function getSolved()
+	public function getTicketFromId()
 	{
-		return $this->solved;
+		return $this->ticketFromId;
 	}
-
-    
 
 	/**
 	 * Set ticketFromId
@@ -427,19 +548,19 @@ trait RequestDefinition
 		$this->ticketFromId = $ticketFromId;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get ticketFromId
+	 * Get createdAt
 	 *
-	 * @return integer
+	 * @return datetime
 	 */
-	public function getTicketFromId()
+	public function getCreatedAt()
 	{
-		return $this->ticketFromId;
+		return $this->createdAt;
 	}
-
-    
 
 	/**
 	 * Set createdAt
@@ -452,19 +573,19 @@ trait RequestDefinition
 		$this->createdAt = $createdAt;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get createdAt
+	 * Get updatedAt
 	 *
 	 * @return datetime
 	 */
-	public function getCreatedAt()
+	public function getUpdatedAt()
 	{
-		return $this->createdAt;
+		return $this->updatedAt;
 	}
-
-    
 
 	/**
 	 * Set updatedAt
@@ -477,19 +598,19 @@ trait RequestDefinition
 		$this->updatedAt = $updatedAt;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get updatedAt
+	 * Get recepient
 	 *
-	 * @return datetime
+	 * @return string
 	 */
-	public function getUpdatedAt()
+	public function getRecepient()
 	{
-		return $this->updatedAt;
+		return $this->recepient;
 	}
-
-    
 
 	/**
 	 * Set recepient
@@ -502,19 +623,19 @@ trait RequestDefinition
 		$this->recepient = $recepient;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get recepient
+	 * Get followupSourceId
 	 *
-	 * @return string
+	 * @return integer
 	 */
-	public function getRecepient()
+	public function getFollowupSourceId()
 	{
-		return $this->recepient;
+		return $this->followupSourceId;
 	}
-
-    
 
 	/**
 	 * Set followupSourceId
@@ -527,19 +648,19 @@ trait RequestDefinition
 		$this->followupSourceId = $followupSourceId;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get followupSourceId
+	 * Get id
 	 *
 	 * @return integer
 	 */
-	public function getFollowupSourceId()
+	public function getId()
 	{
-		return $this->followupSourceId;
+		return $this->id;
 	}
-
-    
 
 	/**
 	 * Set id
@@ -552,19 +673,19 @@ trait RequestDefinition
 		$this->id = $id;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get id
+	 * Get url
 	 *
-	 * @return integer
+	 * @return string
 	 */
-	public function getId()
+	public function getUrl()
 	{
-		return $this->id;
+		return $this->url;
 	}
-
-    
 
 	/**
 	 * Set url
@@ -577,19 +698,19 @@ trait RequestDefinition
 		$this->url = $url;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get url
+	 * Get subject
 	 *
 	 * @return string
 	 */
-	public function getUrl()
+	public function getSubject()
 	{
-		return $this->url;
+		return $this->subject;
 	}
-
-    
 
 	/**
 	 * Set subject
@@ -602,19 +723,19 @@ trait RequestDefinition
 		$this->subject = $subject;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get subject
+	 * Get description
 	 *
 	 * @return string
 	 */
-	public function getSubject()
+	public function getDescription()
 	{
-		return $this->subject;
+		return $this->description;
 	}
-
-    
 
 	/**
 	 * Set description
@@ -627,19 +748,19 @@ trait RequestDefinition
 		$this->description = $description;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get description
+	 * Get status
 	 *
 	 * @return string
 	 */
-	public function getDescription()
+	public function getStatus()
 	{
-		return $this->description;
+		return $this->status;
 	}
-
-    
 
 	/**
 	 * Set status
@@ -652,24 +773,24 @@ trait RequestDefinition
 		$this->status = $status;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get status
+	 * Get priority
 	 *
-	 * @return string
+	 * @return Object
 	 */
-	public function getStatus()
+	public function getPriority()
 	{
-		return $this->status;
+		return $this->priority;
 	}
-
-    
 
 	/**
 	 * Set priority
 	 *
-	 * @param  string $priority
+	 * @param  Object $priority
 	 * @return Request
 	 */
 	public function setPriority($priority)
@@ -677,19 +798,19 @@ trait RequestDefinition
 		$this->priority = $priority;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get priority
+	 * Get type
 	 *
 	 * @return string
 	 */
-	public function getPriority()
+	public function getType()
 	{
-		return $this->priority;
+		return $this->type;
 	}
-
-    
 
 	/**
 	 * Set type
@@ -702,16 +823,5 @@ trait RequestDefinition
 		$this->type = $type;
 		
 		return $this;
-	}
-	
-	/**
-	 * Get type
-	 *
-	 * @return string
-	 */
-	public function getType()
-	{
-		return $this->type;
-	}
-
+	}	
 }

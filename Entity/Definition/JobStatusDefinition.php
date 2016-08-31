@@ -17,49 +17,81 @@ trait JobStatusDefinition
 	 *
 	 
 	 */
-	private $id;    
+	
+	private $id;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $url;    
+	
+	private $url;
+	
+    
 
 	 /**
 	 * @var integer
 	 *
 	 
 	 */
-	private $total;    
+	
+	private $total;
+	
+    
 
 	 /**
 	 * @var integer
 	 *
 	 
 	 */
-	private $progress;    
+	
+	private $progress;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $status;    
+	
+	private $status;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $message;    
+	
+	private $message;
+	
+    
 
 	 /**
-	 * @var string
+	 * @var Array
 	 *
 	 
 	 */
-	private $results;    
+	
+	private $results;
+	
+    
+
+	
+	/**
+	 * Get id
+	 *
+	 * @return string
+	 */
+	public function getId()
+	{
+		return $this->id;
+	}
 
 	/**
 	 * Set id
@@ -72,19 +104,19 @@ trait JobStatusDefinition
 		$this->id = $id;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get id
+	 * Get url
 	 *
 	 * @return string
 	 */
-	public function getId()
+	public function getUrl()
 	{
-		return $this->id;
+		return $this->url;
 	}
-
-    
 
 	/**
 	 * Set url
@@ -97,19 +129,19 @@ trait JobStatusDefinition
 		$this->url = $url;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get url
+	 * Get total
 	 *
-	 * @return string
+	 * @return integer
 	 */
-	public function getUrl()
+	public function getTotal()
 	{
-		return $this->url;
+		return $this->total;
 	}
-
-    
 
 	/**
 	 * Set total
@@ -122,19 +154,19 @@ trait JobStatusDefinition
 		$this->total = $total;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get total
+	 * Get progress
 	 *
 	 * @return integer
 	 */
-	public function getTotal()
+	public function getProgress()
 	{
-		return $this->total;
+		return $this->progress;
 	}
-
-    
 
 	/**
 	 * Set progress
@@ -147,19 +179,19 @@ trait JobStatusDefinition
 		$this->progress = $progress;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get progress
+	 * Get status
 	 *
-	 * @return integer
+	 * @return string
 	 */
-	public function getProgress()
+	public function getStatus()
 	{
-		return $this->progress;
+		return $this->status;
 	}
-
-    
 
 	/**
 	 * Set status
@@ -172,19 +204,19 @@ trait JobStatusDefinition
 		$this->status = $status;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get status
+	 * Get message
 	 *
 	 * @return string
 	 */
-	public function getStatus()
+	public function getMessage()
 	{
-		return $this->status;
+		return $this->message;
 	}
-
-    
 
 	/**
 	 * Set message
@@ -197,24 +229,46 @@ trait JobStatusDefinition
 		$this->message = $message;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get message
-	 *
-	 * @return string
+	 * Add elem
+	 * @param mixed $elem
+	 * @return JobStatus
 	 */
-	public function getMessage()
+	public function addResults($elem)
 	{
-		return $this->message;
+		$this->results[] = $elem;
+		return $this;
 	}
 
-    
+	/**
+	 * Has elem
+	 * @param mixed $elem
+	 * @return boolean
+	 */
+	public function hasResults($elem)
+	{
+		return in_array($elem, $this->results);
+	}
+	
+	
+	/**
+	 * Get results
+	 *
+	 * @return Array
+	 */
+	public function getResults()
+	{
+		return $this->results;
+	}
 
 	/**
 	 * Set results
 	 *
-	 * @param  string $results
+	 * @param  Array $results
 	 * @return JobStatus
 	 */
 	public function setResults($results)
@@ -222,16 +276,5 @@ trait JobStatusDefinition
 		$this->results = $results;
 		
 		return $this;
-	}
-	
-	/**
-	 * Get results
-	 *
-	 * @return string
-	 */
-	public function getResults()
-	{
-		return $this->results;
-	}
-
+	}	
 }

@@ -17,42 +17,71 @@ trait GroupDefinition
 	 *
 	 
 	 */
-	private $name;    
+	
+	private $name;
+	
+    
+
+	 /**
+	 * @var blob
+	 *
+	 
+	 */
+	
+	private $deleted;
+	
+    
 
 	 /**
 	 * @var integer
 	 *
 	 
 	 */
-	private $deleted;    
-
-	 /**
-	 * @var integer
-	 *
-	 
-	 */
-	private $id;    
+	
+	private $id;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $url;    
+	
+	private $url;
+	
+    
 
 	 /**
 	 * @var datetime
 	 *
 	 
 	 */
-	private $createdAt;    
+	
+	private $createdAt;
+	
+    
 
 	 /**
 	 * @var datetime
 	 *
 	 
 	 */
-	private $updatedAt;    
+	
+	private $updatedAt;
+	
+    
+
+	
+	/**
+	 * Get name
+	 *
+	 * @return string
+	 */
+	public function getName()
+	{
+		return $this->name;
+	}
 
 	/**
 	 * Set name
@@ -65,24 +94,24 @@ trait GroupDefinition
 		$this->name = $name;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get name
+	 * Get deleted
 	 *
-	 * @return string
+	 * @return blob
 	 */
-	public function getName()
+	public function getDeleted()
 	{
-		return $this->name;
+		return $this->deleted;
 	}
-
-    
 
 	/**
 	 * Set deleted
 	 *
-	 * @param  integer $deleted
+	 * @param  blob $deleted
 	 * @return Group
 	 */
 	public function setDeleted($deleted)
@@ -90,19 +119,19 @@ trait GroupDefinition
 		$this->deleted = $deleted;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get deleted
+	 * Get id
 	 *
 	 * @return integer
 	 */
-	public function getDeleted()
+	public function getId()
 	{
-		return $this->deleted;
+		return $this->id;
 	}
-
-    
 
 	/**
 	 * Set id
@@ -115,19 +144,19 @@ trait GroupDefinition
 		$this->id = $id;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get id
+	 * Get url
 	 *
-	 * @return integer
+	 * @return string
 	 */
-	public function getId()
+	public function getUrl()
 	{
-		return $this->id;
+		return $this->url;
 	}
-
-    
 
 	/**
 	 * Set url
@@ -140,19 +169,19 @@ trait GroupDefinition
 		$this->url = $url;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get url
+	 * Get createdAt
 	 *
-	 * @return string
+	 * @return datetime
 	 */
-	public function getUrl()
+	public function getCreatedAt()
 	{
-		return $this->url;
+		return $this->createdAt;
 	}
-
-    
 
 	/**
 	 * Set createdAt
@@ -165,19 +194,19 @@ trait GroupDefinition
 		$this->createdAt = $createdAt;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get createdAt
+	 * Get updatedAt
 	 *
 	 * @return datetime
 	 */
-	public function getCreatedAt()
+	public function getUpdatedAt()
 	{
-		return $this->createdAt;
+		return $this->updatedAt;
 	}
-
-    
 
 	/**
 	 * Set updatedAt
@@ -190,16 +219,5 @@ trait GroupDefinition
 		$this->updatedAt = $updatedAt;
 		
 		return $this;
-	}
-	
-	/**
-	 * Get updatedAt
-	 *
-	 * @return datetime
-	 */
-	public function getUpdatedAt()
-	{
-		return $this->updatedAt;
-	}
-
+	}	
 }

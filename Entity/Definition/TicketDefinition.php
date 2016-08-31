@@ -17,210 +17,311 @@ trait TicketDefinition
 	 *
 	 
 	 */
-	private $externalId;    
+	
+	private $externalId;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $type;    
+	
+	private $type;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $subject;    
+	
+	private $subject;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $rawSubject;    
+	
+	private $rawSubject;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $description;    
+	
+	private $description;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $priority;    
+	
+	private $priority;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $status;    
+	
+	private $status;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $recipient;    
+	
+	private $recipient;
+	
+    
 
 	 /**
 	 * @var integer
 	 *
 	 
 	 */
-	private $requesterId;    
+	
+	private $requesterId;
+	
+    
 
 	 /**
 	 * @var integer
 	 *
 	 
 	 */
-	private $submitterId;    
+	
+	private $submitterId;
+	
+    
 
 	 /**
 	 * @var integer
 	 *
 	 
 	 */
-	private $assigneeId;    
+	
+	private $assigneeId;
+	
+    
 
 	 /**
 	 * @var integer
 	 *
 	 
 	 */
-	private $organizationId;    
+	
+	private $organizationId;
+	
+    
 
 	 /**
-	 * @var string
+	 * @var Array
 	 *
 	 
 	 */
-	private $collaboratorIds;    
-
-	 /**
-	 * @var integer
-	 *
-	 
-	 */
-	private $forumTopicId;    
-
-	 /**
-	 * @var integer
-	 *
-	 
-	 */
-	private $problemId;    
+	
+	private $collaboratorIds;
+	
+    
 
 	 /**
 	 * @var integer
 	 *
 	 
 	 */
-	private $hasIncidents;    
+	
+	private $forumTopicId;
+	
+    
+
+	 /**
+	 * @var integer
+	 *
+	 
+	 */
+	
+	private $problemId;
+	
+    
+
+	 /**
+	 * @var blob
+	 *
+	 
+	 */
+	
+	private $hasIncidents;
+	
+    
 
 	 /**
 	 * @var datetime
 	 *
 	 
 	 */
-	private $dueAt;    
+	
+	private $dueAt;
+	
+    
 
 	 /**
-	 * @var string
+	 * @var Array
 	 *
 	 
 	 */
-	private $tags;    
+	
+	private $tags;
+	
+    
 
 	 /**
-	 * @var string
+	 * @var Object
 	 *
 	 
 	 */
-	private $via;    
+	
+	private $via;
+	
+    
 
 	 /**
-	 * @var string
+	 * @var Array
 	 *
 	 
 	 */
-	private $customFields;    
+	
+	private $customFields;
+	
+    
 
 	 /**
-	 * @var string
+	 * @var Object
 	 *
 	 
 	 */
-	private $satisfactionRating;    
+	
+	private $satisfactionRating;
+	
+    
 
 	 /**
-	 * @var string
+	 * @var Array
 	 *
 	 
 	 */
-	private $sharingAgreementIds;    
+	
+	private $sharingAgreementIds;
+	
+    
 
 	 /**
-	 * @var string
+	 * @var Array
 	 *
 	 
 	 */
-	private $followupIds;    
+	
+	private $followupIds;
+	
+    
 
 	 /**
 	 * @var integer
 	 *
 	 
 	 */
-	private $ticketFormId;    
+	
+	private $ticketFormId;
+	
+    
 
 	 /**
 	 * @var integer
 	 *
 	 
 	 */
-	private $brandId;    
+	
+	private $brandId;
+	
+    
 
 	 /**
-	 * @var integer
+	 * @var blob
 	 *
 	 
 	 */
-	private $allowChannelback;    
+	
+	private $allowChannelback;
+	
+    
 
 	 /**
-	 * @var integer
+	 * @var blob
 	 *
 	 
 	 */
-	private $isPublic;    
+	
+	private $isPublic;
+	
+    
 
 	 /**
 	 * @var datetime
 	 *
 	 
 	 */
-	private $createdAt;    
+	
+	private $createdAt;
+	
+    
 
 	 /**
 	 * @var datetime
 	 *
 	 
 	 */
-	private $updatedAt;    
+	
+	private $updatedAt;
+	
+    
 
 	 /**
 	 * @var integer
 	 *
 	 
 	 */
-	private $id;    
+	
+	private $id;
+	
+    
+
+	
+	/**
+	 * Get externalId
+	 *
+	 * @return string
+	 */
+	public function getExternalId()
+	{
+		return $this->externalId;
+	}
 
 	/**
 	 * Set externalId
@@ -233,19 +334,19 @@ trait TicketDefinition
 		$this->externalId = $externalId;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get externalId
+	 * Get type
 	 *
 	 * @return string
 	 */
-	public function getExternalId()
+	public function getType()
 	{
-		return $this->externalId;
+		return $this->type;
 	}
-
-    
 
 	/**
 	 * Set type
@@ -258,19 +359,19 @@ trait TicketDefinition
 		$this->type = $type;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get type
+	 * Get subject
 	 *
 	 * @return string
 	 */
-	public function getType()
+	public function getSubject()
 	{
-		return $this->type;
+		return $this->subject;
 	}
-
-    
 
 	/**
 	 * Set subject
@@ -283,19 +384,19 @@ trait TicketDefinition
 		$this->subject = $subject;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get subject
+	 * Get rawSubject
 	 *
 	 * @return string
 	 */
-	public function getSubject()
+	public function getRawSubject()
 	{
-		return $this->subject;
+		return $this->rawSubject;
 	}
-
-    
 
 	/**
 	 * Set rawSubject
@@ -308,19 +409,19 @@ trait TicketDefinition
 		$this->rawSubject = $rawSubject;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get rawSubject
+	 * Get description
 	 *
 	 * @return string
 	 */
-	public function getRawSubject()
+	public function getDescription()
 	{
-		return $this->rawSubject;
+		return $this->description;
 	}
-
-    
 
 	/**
 	 * Set description
@@ -333,19 +434,19 @@ trait TicketDefinition
 		$this->description = $description;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get description
+	 * Get priority
 	 *
 	 * @return string
 	 */
-	public function getDescription()
+	public function getPriority()
 	{
-		return $this->description;
+		return $this->priority;
 	}
-
-    
 
 	/**
 	 * Set priority
@@ -358,19 +459,19 @@ trait TicketDefinition
 		$this->priority = $priority;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get priority
+	 * Get status
 	 *
 	 * @return string
 	 */
-	public function getPriority()
+	public function getStatus()
 	{
-		return $this->priority;
+		return $this->status;
 	}
-
-    
 
 	/**
 	 * Set status
@@ -383,19 +484,19 @@ trait TicketDefinition
 		$this->status = $status;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get status
+	 * Get recipient
 	 *
 	 * @return string
 	 */
-	public function getStatus()
+	public function getRecipient()
 	{
-		return $this->status;
+		return $this->recipient;
 	}
-
-    
 
 	/**
 	 * Set recipient
@@ -408,19 +509,19 @@ trait TicketDefinition
 		$this->recipient = $recipient;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get recipient
+	 * Get requesterId
 	 *
-	 * @return string
+	 * @return integer
 	 */
-	public function getRecipient()
+	public function getRequesterId()
 	{
-		return $this->recipient;
+		return $this->requesterId;
 	}
-
-    
 
 	/**
 	 * Set requesterId
@@ -433,19 +534,19 @@ trait TicketDefinition
 		$this->requesterId = $requesterId;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get requesterId
+	 * Get submitterId
 	 *
 	 * @return integer
 	 */
-	public function getRequesterId()
+	public function getSubmitterId()
 	{
-		return $this->requesterId;
+		return $this->submitterId;
 	}
-
-    
 
 	/**
 	 * Set submitterId
@@ -458,19 +559,19 @@ trait TicketDefinition
 		$this->submitterId = $submitterId;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get submitterId
+	 * Get assigneeId
 	 *
 	 * @return integer
 	 */
-	public function getSubmitterId()
+	public function getAssigneeId()
 	{
-		return $this->submitterId;
+		return $this->assigneeId;
 	}
-
-    
 
 	/**
 	 * Set assigneeId
@@ -483,19 +584,19 @@ trait TicketDefinition
 		$this->assigneeId = $assigneeId;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get assigneeId
+	 * Get organizationId
 	 *
 	 * @return integer
 	 */
-	public function getAssigneeId()
+	public function getOrganizationId()
 	{
-		return $this->assigneeId;
+		return $this->organizationId;
 	}
-
-    
 
 	/**
 	 * Set organizationId
@@ -508,24 +609,46 @@ trait TicketDefinition
 		$this->organizationId = $organizationId;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get organizationId
-	 *
-	 * @return integer
+	 * Add elem
+	 * @param mixed $elem
+	 * @return Ticket
 	 */
-	public function getOrganizationId()
+	public function addCollaboratorIds($elem)
 	{
-		return $this->organizationId;
+		$this->collaboratorIds[] = $elem;
+		return $this;
 	}
 
-    
+	/**
+	 * Has elem
+	 * @param mixed $elem
+	 * @return boolean
+	 */
+	public function hasCollaboratorIds($elem)
+	{
+		return in_array($elem, $this->collaboratorIds);
+	}
+	
+	
+	/**
+	 * Get collaboratorIds
+	 *
+	 * @return Array
+	 */
+	public function getCollaboratorIds()
+	{
+		return $this->collaboratorIds;
+	}
 
 	/**
 	 * Set collaboratorIds
 	 *
-	 * @param  string $collaboratorIds
+	 * @param  Array $collaboratorIds
 	 * @return Ticket
 	 */
 	public function setCollaboratorIds($collaboratorIds)
@@ -533,19 +656,19 @@ trait TicketDefinition
 		$this->collaboratorIds = $collaboratorIds;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get collaboratorIds
+	 * Get forumTopicId
 	 *
-	 * @return string
+	 * @return integer
 	 */
-	public function getCollaboratorIds()
+	public function getForumTopicId()
 	{
-		return $this->collaboratorIds;
+		return $this->forumTopicId;
 	}
-
-    
 
 	/**
 	 * Set forumTopicId
@@ -558,19 +681,19 @@ trait TicketDefinition
 		$this->forumTopicId = $forumTopicId;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get forumTopicId
+	 * Get problemId
 	 *
 	 * @return integer
 	 */
-	public function getForumTopicId()
+	public function getProblemId()
 	{
-		return $this->forumTopicId;
+		return $this->problemId;
 	}
-
-    
 
 	/**
 	 * Set problemId
@@ -583,24 +706,24 @@ trait TicketDefinition
 		$this->problemId = $problemId;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get problemId
+	 * Get hasIncidents
 	 *
-	 * @return integer
+	 * @return blob
 	 */
-	public function getProblemId()
+	public function getHasIncidents()
 	{
-		return $this->problemId;
+		return $this->hasIncidents;
 	}
-
-    
 
 	/**
 	 * Set hasIncidents
 	 *
-	 * @param  integer $hasIncidents
+	 * @param  blob $hasIncidents
 	 * @return Ticket
 	 */
 	public function setHasIncidents($hasIncidents)
@@ -608,19 +731,19 @@ trait TicketDefinition
 		$this->hasIncidents = $hasIncidents;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get hasIncidents
+	 * Get dueAt
 	 *
-	 * @return integer
+	 * @return datetime
 	 */
-	public function getHasIncidents()
+	public function getDueAt()
 	{
-		return $this->hasIncidents;
+		return $this->dueAt;
 	}
-
-    
 
 	/**
 	 * Set dueAt
@@ -633,24 +756,46 @@ trait TicketDefinition
 		$this->dueAt = $dueAt;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get dueAt
-	 *
-	 * @return datetime
+	 * Add elem
+	 * @param mixed $elem
+	 * @return Ticket
 	 */
-	public function getDueAt()
+	public function addTags($elem)
 	{
-		return $this->dueAt;
+		$this->tags[] = $elem;
+		return $this;
 	}
 
-    
+	/**
+	 * Has elem
+	 * @param mixed $elem
+	 * @return boolean
+	 */
+	public function hasTags($elem)
+	{
+		return in_array($elem, $this->tags);
+	}
+	
+	
+	/**
+	 * Get tags
+	 *
+	 * @return Array
+	 */
+	public function getTags()
+	{
+		return $this->tags;
+	}
 
 	/**
 	 * Set tags
 	 *
-	 * @param  string $tags
+	 * @param  Array $tags
 	 * @return Ticket
 	 */
 	public function setTags($tags)
@@ -658,24 +803,24 @@ trait TicketDefinition
 		$this->tags = $tags;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get tags
+	 * Get via
 	 *
-	 * @return string
+	 * @return Object
 	 */
-	public function getTags()
+	public function getVia()
 	{
-		return $this->tags;
+		return $this->via;
 	}
-
-    
 
 	/**
 	 * Set via
 	 *
-	 * @param  string $via
+	 * @param  Object $via
 	 * @return Ticket
 	 */
 	public function setVia($via)
@@ -683,24 +828,46 @@ trait TicketDefinition
 		$this->via = $via;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get via
-	 *
-	 * @return string
+	 * Add elem
+	 * @param mixed $elem
+	 * @return Ticket
 	 */
-	public function getVia()
+	public function addCustomFields($elem)
 	{
-		return $this->via;
+		$this->customFields[] = $elem;
+		return $this;
 	}
 
-    
+	/**
+	 * Has elem
+	 * @param mixed $elem
+	 * @return boolean
+	 */
+	public function hasCustomFields($elem)
+	{
+		return in_array($elem, $this->customFields);
+	}
+	
+	
+	/**
+	 * Get customFields
+	 *
+	 * @return Array
+	 */
+	public function getCustomFields()
+	{
+		return $this->customFields;
+	}
 
 	/**
 	 * Set customFields
 	 *
-	 * @param  string $customFields
+	 * @param  Array $customFields
 	 * @return Ticket
 	 */
 	public function setCustomFields($customFields)
@@ -708,24 +875,24 @@ trait TicketDefinition
 		$this->customFields = $customFields;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get customFields
+	 * Get satisfactionRating
 	 *
-	 * @return string
+	 * @return Object
 	 */
-	public function getCustomFields()
+	public function getSatisfactionRating()
 	{
-		return $this->customFields;
+		return $this->satisfactionRating;
 	}
-
-    
 
 	/**
 	 * Set satisfactionRating
 	 *
-	 * @param  string $satisfactionRating
+	 * @param  Object $satisfactionRating
 	 * @return Ticket
 	 */
 	public function setSatisfactionRating($satisfactionRating)
@@ -733,24 +900,46 @@ trait TicketDefinition
 		$this->satisfactionRating = $satisfactionRating;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get satisfactionRating
-	 *
-	 * @return string
+	 * Add elem
+	 * @param mixed $elem
+	 * @return Ticket
 	 */
-	public function getSatisfactionRating()
+	public function addSharingAgreementIds($elem)
 	{
-		return $this->satisfactionRating;
+		$this->sharingAgreementIds[] = $elem;
+		return $this;
 	}
 
-    
+	/**
+	 * Has elem
+	 * @param mixed $elem
+	 * @return boolean
+	 */
+	public function hasSharingAgreementIds($elem)
+	{
+		return in_array($elem, $this->sharingAgreementIds);
+	}
+	
+	
+	/**
+	 * Get sharingAgreementIds
+	 *
+	 * @return Array
+	 */
+	public function getSharingAgreementIds()
+	{
+		return $this->sharingAgreementIds;
+	}
 
 	/**
 	 * Set sharingAgreementIds
 	 *
-	 * @param  string $sharingAgreementIds
+	 * @param  Array $sharingAgreementIds
 	 * @return Ticket
 	 */
 	public function setSharingAgreementIds($sharingAgreementIds)
@@ -758,24 +947,46 @@ trait TicketDefinition
 		$this->sharingAgreementIds = $sharingAgreementIds;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get sharingAgreementIds
-	 *
-	 * @return string
+	 * Add elem
+	 * @param mixed $elem
+	 * @return Ticket
 	 */
-	public function getSharingAgreementIds()
+	public function addFollowupIds($elem)
 	{
-		return $this->sharingAgreementIds;
+		$this->followupIds[] = $elem;
+		return $this;
 	}
 
-    
+	/**
+	 * Has elem
+	 * @param mixed $elem
+	 * @return boolean
+	 */
+	public function hasFollowupIds($elem)
+	{
+		return in_array($elem, $this->followupIds);
+	}
+	
+	
+	/**
+	 * Get followupIds
+	 *
+	 * @return Array
+	 */
+	public function getFollowupIds()
+	{
+		return $this->followupIds;
+	}
 
 	/**
 	 * Set followupIds
 	 *
-	 * @param  string $followupIds
+	 * @param  Array $followupIds
 	 * @return Ticket
 	 */
 	public function setFollowupIds($followupIds)
@@ -783,19 +994,19 @@ trait TicketDefinition
 		$this->followupIds = $followupIds;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get followupIds
+	 * Get ticketFormId
 	 *
-	 * @return string
+	 * @return integer
 	 */
-	public function getFollowupIds()
+	public function getTicketFormId()
 	{
-		return $this->followupIds;
+		return $this->ticketFormId;
 	}
-
-    
 
 	/**
 	 * Set ticketFormId
@@ -808,19 +1019,19 @@ trait TicketDefinition
 		$this->ticketFormId = $ticketFormId;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get ticketFormId
+	 * Get brandId
 	 *
 	 * @return integer
 	 */
-	public function getTicketFormId()
+	public function getBrandId()
 	{
-		return $this->ticketFormId;
+		return $this->brandId;
 	}
-
-    
 
 	/**
 	 * Set brandId
@@ -833,24 +1044,24 @@ trait TicketDefinition
 		$this->brandId = $brandId;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get brandId
+	 * Get allowChannelback
 	 *
-	 * @return integer
+	 * @return blob
 	 */
-	public function getBrandId()
+	public function getAllowChannelback()
 	{
-		return $this->brandId;
+		return $this->allowChannelback;
 	}
-
-    
 
 	/**
 	 * Set allowChannelback
 	 *
-	 * @param  integer $allowChannelback
+	 * @param  blob $allowChannelback
 	 * @return Ticket
 	 */
 	public function setAllowChannelback($allowChannelback)
@@ -858,24 +1069,24 @@ trait TicketDefinition
 		$this->allowChannelback = $allowChannelback;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get allowChannelback
+	 * Get isPublic
 	 *
-	 * @return integer
+	 * @return blob
 	 */
-	public function getAllowChannelback()
+	public function getIsPublic()
 	{
-		return $this->allowChannelback;
+		return $this->isPublic;
 	}
-
-    
 
 	/**
 	 * Set isPublic
 	 *
-	 * @param  integer $isPublic
+	 * @param  blob $isPublic
 	 * @return Ticket
 	 */
 	public function setIsPublic($isPublic)
@@ -883,19 +1094,19 @@ trait TicketDefinition
 		$this->isPublic = $isPublic;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get isPublic
+	 * Get createdAt
 	 *
-	 * @return integer
+	 * @return datetime
 	 */
-	public function getIsPublic()
+	public function getCreatedAt()
 	{
-		return $this->isPublic;
+		return $this->createdAt;
 	}
-
-    
 
 	/**
 	 * Set createdAt
@@ -908,19 +1119,19 @@ trait TicketDefinition
 		$this->createdAt = $createdAt;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get createdAt
+	 * Get updatedAt
 	 *
 	 * @return datetime
 	 */
-	public function getCreatedAt()
+	public function getUpdatedAt()
 	{
-		return $this->createdAt;
+		return $this->updatedAt;
 	}
-
-    
 
 	/**
 	 * Set updatedAt
@@ -933,19 +1144,19 @@ trait TicketDefinition
 		$this->updatedAt = $updatedAt;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get updatedAt
+	 * Get id
 	 *
-	 * @return datetime
+	 * @return integer
 	 */
-	public function getUpdatedAt()
+	public function getId()
 	{
-		return $this->updatedAt;
+		return $this->id;
 	}
-
-    
 
 	/**
 	 * Set id
@@ -958,16 +1169,5 @@ trait TicketDefinition
 		$this->id = $id;
 		
 		return $this;
-	}
-	
-	/**
-	 * Get id
-	 *
-	 * @return integer
-	 */
-	public function getId()
-	{
-		return $this->id;
-	}
-
+	}	
 }

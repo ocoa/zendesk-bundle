@@ -6,10 +6,10 @@
 namespace ZendeskBundle\Entity\Definition;
 
 /**
- * Definition class for the OrganizationMemberships connector object
+ * Definition class for the OrganizationMembership connector object
  *
  */
-trait OrganizationMembershipsDefinition
+trait OrganizationMembershipDefinition
 {    
 
 	 /**
@@ -17,62 +17,71 @@ trait OrganizationMembershipsDefinition
 	 *
 	 
 	 */
-	private $id;    
+	
+	private $id;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $url;    
+	
+	private $url;
+	
+    
 
 	 /**
 	 * @var integer
 	 *
 	 
 	 */
-	private $userId;    
+	
+	private $userId;
+	
+    
 
 	 /**
 	 * @var integer
 	 *
 	 
 	 */
-	private $organizationId;    
+	
+	private $organizationId;
+	
+    
 
 	 /**
-	 * @var integer
+	 * @var blob
 	 *
 	 
 	 */
-	private $default;    
+	
+	private $default;
+	
+    
 
 	 /**
 	 * @var datetime
 	 *
 	 
 	 */
-	private $createdAt;    
+	
+	private $createdAt;
+	
+    
 
 	 /**
 	 * @var datetime
 	 *
 	 
 	 */
-	private $updatedAt;    
+	
+	private $updatedAt;
+	
+    
 
-	/**
-	 * Set id
-	 *
-	 * @param  integer $id
-	 * @return OrganizationMemberships
-	 */
-	public function setId($id)
-	{
-		$this->id = $id;
-		
-		return $this;
-	}
 	
 	/**
 	 * Get id
@@ -84,20 +93,20 @@ trait OrganizationMembershipsDefinition
 		return $this->id;
 	}
 
-    
-
 	/**
-	 * Set url
+	 * Set id
 	 *
-	 * @param  string $url
-	 * @return OrganizationMemberships
+	 * @param  integer $id
+	 * @return OrganizationMembership
 	 */
-	public function setUrl($url)
+	public function setId($id)
 	{
-		$this->url = $url;
+		$this->id = $id;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
 	 * Get url
@@ -109,20 +118,20 @@ trait OrganizationMembershipsDefinition
 		return $this->url;
 	}
 
-    
-
 	/**
-	 * Set userId
+	 * Set url
 	 *
-	 * @param  integer $userId
-	 * @return OrganizationMemberships
+	 * @param  string $url
+	 * @return OrganizationMembership
 	 */
-	public function setUserId($userId)
+	public function setUrl($url)
 	{
-		$this->userId = $userId;
+		$this->url = $url;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
 	 * Get userId
@@ -134,20 +143,20 @@ trait OrganizationMembershipsDefinition
 		return $this->userId;
 	}
 
-    
-
 	/**
-	 * Set organizationId
+	 * Set userId
 	 *
-	 * @param  integer $organizationId
-	 * @return OrganizationMemberships
+	 * @param  integer $userId
+	 * @return OrganizationMembership
 	 */
-	public function setOrganizationId($organizationId)
+	public function setUserId($userId)
 	{
-		$this->organizationId = $organizationId;
+		$this->userId = $userId;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
 	 * Get organizationId
@@ -159,45 +168,45 @@ trait OrganizationMembershipsDefinition
 		return $this->organizationId;
 	}
 
-    
-
 	/**
-	 * Set default
+	 * Set organizationId
 	 *
-	 * @param  integer $default
-	 * @return OrganizationMemberships
+	 * @param  integer $organizationId
+	 * @return OrganizationMembership
 	 */
-	public function setDefault($default)
+	public function setOrganizationId($organizationId)
 	{
-		$this->default = $default;
+		$this->organizationId = $organizationId;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
 	 * Get default
 	 *
-	 * @return integer
+	 * @return blob
 	 */
 	public function getDefault()
 	{
 		return $this->default;
 	}
 
-    
-
 	/**
-	 * Set createdAt
+	 * Set default
 	 *
-	 * @param  datetime $createdAt
-	 * @return OrganizationMemberships
+	 * @param  blob $default
+	 * @return OrganizationMembership
 	 */
-	public function setCreatedAt($createdAt)
+	public function setDefault($default)
 	{
-		$this->createdAt = $createdAt;
+		$this->default = $default;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
 	 * Get createdAt
@@ -209,20 +218,20 @@ trait OrganizationMembershipsDefinition
 		return $this->createdAt;
 	}
 
-    
-
 	/**
-	 * Set updatedAt
+	 * Set createdAt
 	 *
-	 * @param  datetime $updatedAt
-	 * @return OrganizationMemberships
+	 * @param  datetime $createdAt
+	 * @return OrganizationMembership
 	 */
-	public function setUpdatedAt($updatedAt)
+	public function setCreatedAt($createdAt)
 	{
-		$this->updatedAt = $updatedAt;
+		$this->createdAt = $createdAt;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
 	 * Get updatedAt
@@ -234,4 +243,16 @@ trait OrganizationMembershipsDefinition
 		return $this->updatedAt;
 	}
 
+	/**
+	 * Set updatedAt
+	 *
+	 * @param  datetime $updatedAt
+	 * @return OrganizationMembership
+	 */
+	public function setUpdatedAt($updatedAt)
+	{
+		$this->updatedAt = $updatedAt;
+		
+		return $this;
+	}	
 }

@@ -17,91 +17,141 @@ trait SuspendedTicketDefinition
 	 *
 	 
 	 */
-	private $ticketId;    
+	
+	private $ticketId;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $recipient;    
+	
+	private $recipient;
+	
+    
 
 	 /**
 	 * @var datetime
 	 *
 	 
 	 */
-	private $createdAt;    
+	
+	private $createdAt;
+	
+    
 
 	 /**
 	 * @var datetime
 	 *
 	 
 	 */
-	private $updatedAt;    
+	
+	private $updatedAt;
+	
+    
 
 	 /**
-	 * @var string
+	 * @var Object
 	 *
 	 
 	 */
-	private $via;    
-
-	 /**
-	 * @var string
-	 *
-	 
-	 */
-	private $brandId;    
+	
+	private $via;
+	
+    
 
 	 /**
 	 * @var integer
 	 *
 	 
 	 */
-	private $id;    
+	
+	private $brandId;
+	
+    
+
+	 /**
+	 * @var integer
+	 *
+	 
+	 */
+	
+	private $id;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $url;    
+	
+	private $url;
+	
+    
+
+	 /**
+	 * @var Object
+	 *
+	 
+	 */
+	
+	private $author;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $author;    
+	
+	private $subject;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $subject;    
+	
+	private $content;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $content;    
+	
+	private $cause;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $cause;    
+	
+	private $messageId;
+	
+    
 
-	 /**
-	 * @var string
+	
+	/**
+	 * Get ticketId
 	 *
-	 
+	 * @return integer
 	 */
-	private $messageId;    
+	public function getTicketId()
+	{
+		return $this->ticketId;
+	}
 
 	/**
 	 * Set ticketId
@@ -114,19 +164,19 @@ trait SuspendedTicketDefinition
 		$this->ticketId = $ticketId;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get ticketId
+	 * Get recipient
 	 *
-	 * @return integer
+	 * @return string
 	 */
-	public function getTicketId()
+	public function getRecipient()
 	{
-		return $this->ticketId;
+		return $this->recipient;
 	}
-
-    
 
 	/**
 	 * Set recipient
@@ -139,19 +189,19 @@ trait SuspendedTicketDefinition
 		$this->recipient = $recipient;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get recipient
+	 * Get createdAt
 	 *
-	 * @return string
+	 * @return datetime
 	 */
-	public function getRecipient()
+	public function getCreatedAt()
 	{
-		return $this->recipient;
+		return $this->createdAt;
 	}
-
-    
 
 	/**
 	 * Set createdAt
@@ -164,19 +214,19 @@ trait SuspendedTicketDefinition
 		$this->createdAt = $createdAt;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get createdAt
+	 * Get updatedAt
 	 *
 	 * @return datetime
 	 */
-	public function getCreatedAt()
+	public function getUpdatedAt()
 	{
-		return $this->createdAt;
+		return $this->updatedAt;
 	}
-
-    
 
 	/**
 	 * Set updatedAt
@@ -189,24 +239,24 @@ trait SuspendedTicketDefinition
 		$this->updatedAt = $updatedAt;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get updatedAt
+	 * Get via
 	 *
-	 * @return datetime
+	 * @return Object
 	 */
-	public function getUpdatedAt()
+	public function getVia()
 	{
-		return $this->updatedAt;
+		return $this->via;
 	}
-
-    
 
 	/**
 	 * Set via
 	 *
-	 * @param  string $via
+	 * @param  Object $via
 	 * @return SuspendedTicket
 	 */
 	public function setVia($via)
@@ -214,24 +264,24 @@ trait SuspendedTicketDefinition
 		$this->via = $via;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get via
+	 * Get brandId
 	 *
-	 * @return string
+	 * @return integer
 	 */
-	public function getVia()
+	public function getBrandId()
 	{
-		return $this->via;
+		return $this->brandId;
 	}
-
-    
 
 	/**
 	 * Set brandId
 	 *
-	 * @param  string $brandId
+	 * @param  integer $brandId
 	 * @return SuspendedTicket
 	 */
 	public function setBrandId($brandId)
@@ -239,19 +289,19 @@ trait SuspendedTicketDefinition
 		$this->brandId = $brandId;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get brandId
+	 * Get id
 	 *
-	 * @return string
+	 * @return integer
 	 */
-	public function getBrandId()
+	public function getId()
 	{
-		return $this->brandId;
+		return $this->id;
 	}
-
-    
 
 	/**
 	 * Set id
@@ -264,19 +314,19 @@ trait SuspendedTicketDefinition
 		$this->id = $id;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get id
+	 * Get url
 	 *
-	 * @return integer
+	 * @return string
 	 */
-	public function getId()
+	public function getUrl()
 	{
-		return $this->id;
+		return $this->url;
 	}
-
-    
 
 	/**
 	 * Set url
@@ -289,24 +339,24 @@ trait SuspendedTicketDefinition
 		$this->url = $url;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get url
+	 * Get author
 	 *
-	 * @return string
+	 * @return Object
 	 */
-	public function getUrl()
+	public function getAuthor()
 	{
-		return $this->url;
+		return $this->author;
 	}
-
-    
 
 	/**
 	 * Set author
 	 *
-	 * @param  string $author
+	 * @param  Object $author
 	 * @return SuspendedTicket
 	 */
 	public function setAuthor($author)
@@ -314,19 +364,19 @@ trait SuspendedTicketDefinition
 		$this->author = $author;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get author
+	 * Get subject
 	 *
 	 * @return string
 	 */
-	public function getAuthor()
+	public function getSubject()
 	{
-		return $this->author;
+		return $this->subject;
 	}
-
-    
 
 	/**
 	 * Set subject
@@ -339,19 +389,19 @@ trait SuspendedTicketDefinition
 		$this->subject = $subject;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get subject
+	 * Get content
 	 *
 	 * @return string
 	 */
-	public function getSubject()
+	public function getContent()
 	{
-		return $this->subject;
+		return $this->content;
 	}
-
-    
 
 	/**
 	 * Set content
@@ -364,19 +414,19 @@ trait SuspendedTicketDefinition
 		$this->content = $content;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get content
+	 * Get cause
 	 *
 	 * @return string
 	 */
-	public function getContent()
+	public function getCause()
 	{
-		return $this->content;
+		return $this->cause;
 	}
-
-    
 
 	/**
 	 * Set cause
@@ -389,19 +439,19 @@ trait SuspendedTicketDefinition
 		$this->cause = $cause;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get cause
+	 * Get messageId
 	 *
 	 * @return string
 	 */
-	public function getCause()
+	public function getMessageId()
 	{
-		return $this->cause;
+		return $this->messageId;
 	}
-
-    
 
 	/**
 	 * Set messageId
@@ -414,16 +464,5 @@ trait SuspendedTicketDefinition
 		$this->messageId = $messageId;
 		
 		return $this;
-	}
-	
-	/**
-	 * Get messageId
-	 *
-	 * @return string
-	 */
-	public function getMessageId()
-	{
-		return $this->messageId;
-	}
-
+	}	
 }

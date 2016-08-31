@@ -17,49 +17,81 @@ trait AttachmentDefinition
 	 *
 	 
 	 */
-	private $id;    
+	
+	private $id;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $fileName;    
+	
+	private $fileName;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $contentType;    
+	
+	private $contentType;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $contentUrl;    
+	
+	private $contentUrl;
+	
+    
 
 	 /**
 	 * @var integer
 	 *
 	 
 	 */
-	private $size;    
+	
+	private $size;
+	
+    
 
 	 /**
-	 * @var string
+	 * @var Array
 	 *
 	 
 	 */
-	private $thumbnails;    
+	
+	private $thumbnails;
+	
+    
 
 	 /**
-	 * @var integer
+	 * @var blob
 	 *
 	 
 	 */
-	private $inline;    
+	
+	private $inline;
+	
+    
+
+	
+	/**
+	 * Get id
+	 *
+	 * @return integer
+	 */
+	public function getId()
+	{
+		return $this->id;
+	}
 
 	/**
 	 * Set id
@@ -72,19 +104,19 @@ trait AttachmentDefinition
 		$this->id = $id;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get id
+	 * Get fileName
 	 *
-	 * @return integer
+	 * @return string
 	 */
-	public function getId()
+	public function getFileName()
 	{
-		return $this->id;
+		return $this->fileName;
 	}
-
-    
 
 	/**
 	 * Set fileName
@@ -97,19 +129,19 @@ trait AttachmentDefinition
 		$this->fileName = $fileName;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get fileName
+	 * Get contentType
 	 *
 	 * @return string
 	 */
-	public function getFileName()
+	public function getContentType()
 	{
-		return $this->fileName;
+		return $this->contentType;
 	}
-
-    
 
 	/**
 	 * Set contentType
@@ -122,19 +154,19 @@ trait AttachmentDefinition
 		$this->contentType = $contentType;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get contentType
+	 * Get contentUrl
 	 *
 	 * @return string
 	 */
-	public function getContentType()
+	public function getContentUrl()
 	{
-		return $this->contentType;
+		return $this->contentUrl;
 	}
-
-    
 
 	/**
 	 * Set contentUrl
@@ -147,19 +179,19 @@ trait AttachmentDefinition
 		$this->contentUrl = $contentUrl;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get contentUrl
+	 * Get size
 	 *
-	 * @return string
+	 * @return integer
 	 */
-	public function getContentUrl()
+	public function getSize()
 	{
-		return $this->contentUrl;
+		return $this->size;
 	}
-
-    
 
 	/**
 	 * Set size
@@ -172,24 +204,46 @@ trait AttachmentDefinition
 		$this->size = $size;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get size
-	 *
-	 * @return integer
+	 * Add elem
+	 * @param mixed $elem
+	 * @return Attachment
 	 */
-	public function getSize()
+	public function addThumbnails($elem)
 	{
-		return $this->size;
+		$this->thumbnails[] = $elem;
+		return $this;
 	}
 
-    
+	/**
+	 * Has elem
+	 * @param mixed $elem
+	 * @return boolean
+	 */
+	public function hasThumbnails($elem)
+	{
+		return in_array($elem, $this->thumbnails);
+	}
+	
+	
+	/**
+	 * Get thumbnails
+	 *
+	 * @return Array
+	 */
+	public function getThumbnails()
+	{
+		return $this->thumbnails;
+	}
 
 	/**
 	 * Set thumbnails
 	 *
-	 * @param  string $thumbnails
+	 * @param  Array $thumbnails
 	 * @return Attachment
 	 */
 	public function setThumbnails($thumbnails)
@@ -197,24 +251,24 @@ trait AttachmentDefinition
 		$this->thumbnails = $thumbnails;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get thumbnails
+	 * Get inline
 	 *
-	 * @return string
+	 * @return blob
 	 */
-	public function getThumbnails()
+	public function getInline()
 	{
-		return $this->thumbnails;
+		return $this->inline;
 	}
-
-    
 
 	/**
 	 * Set inline
 	 *
-	 * @param  integer $inline
+	 * @param  blob $inline
 	 * @return Attachment
 	 */
 	public function setInline($inline)
@@ -222,16 +276,5 @@ trait AttachmentDefinition
 		$this->inline = $inline;
 		
 		return $this;
-	}
-	
-	/**
-	 * Get inline
-	 *
-	 * @return integer
-	 */
-	public function getInline()
-	{
-		return $this->inline;
-	}
-
+	}	
 }

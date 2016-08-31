@@ -17,98 +17,151 @@ trait OrganizationDefinition
 	 *
 	 
 	 */
-	private $updatedAt;    
+	
+	private $updatedAt;
+	
+    
+
+	 /**
+	 * @var Array
+	 *
+	 
+	 */
+	
+	private $domainNames;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $domainNames;    
+	
+	private $details;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $details;    
-
-	 /**
-	 * @var string
-	 *
-	 
-	 */
-	private $notes;    
+	
+	private $notes;
+	
+    
 
 	 /**
 	 * @var integer
 	 *
 	 
 	 */
-	private $groupId;    
+	
+	private $groupId;
+	
+    
+
+	 /**
+	 * @var blob
+	 *
+	 
+	 */
+	
+	private $sharedTickets;
+	
+    
+
+	 /**
+	 * @var blob
+	 *
+	 
+	 */
+	
+	private $sharedComments;
+	
+    
+
+	 /**
+	 * @var Array
+	 *
+	 
+	 */
+	
+	private $tags;
+	
+    
+
+	 /**
+	 * @var Object
+	 *
+	 
+	 */
+	
+	private $organizationFields;
+	
+    
 
 	 /**
 	 * @var integer
 	 *
 	 
 	 */
-	private $sharedTickets;    
-
-	 /**
-	 * @var integer
-	 *
-	 
-	 */
-	private $sharedComments;    
+	
+	private $id;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $tags;    
+	
+	private $url;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $organizationFields;    
-
-	 /**
-	 * @var integer
-	 *
-	 
-	 */
-	private $id;    
+	
+	private $externalId;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $url;    
-
-	 /**
-	 * @var string
-	 *
-	 
-	 */
-	private $externalId;    
-
-	 /**
-	 * @var string
-	 *
-	 
-	 */
-	private $name;    
+	
+	private $name;
+	
+    
 
 	 /**
 	 * @var datetime
 	 *
 	 
 	 */
-	private $createdAt;    
+	
+	private $createdAt;
+	
+    
+
+	
+	/**
+	 * Get updatedAt
+	 *
+	 * @return datetime
+	 */
+	public function getUpdatedAt()
+	{
+		return $this->updatedAt;
+	}
 
 	/**
 	 * Set updatedAt
@@ -121,24 +174,46 @@ trait OrganizationDefinition
 		$this->updatedAt = $updatedAt;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get updatedAt
-	 *
-	 * @return datetime
+	 * Add elem
+	 * @param mixed $elem
+	 * @return Organization
 	 */
-	public function getUpdatedAt()
+	public function addDomainNames($elem)
 	{
-		return $this->updatedAt;
+		$this->domainNames[] = $elem;
+		return $this;
 	}
 
-    
+	/**
+	 * Has elem
+	 * @param mixed $elem
+	 * @return boolean
+	 */
+	public function hasDomainNames($elem)
+	{
+		return in_array($elem, $this->domainNames);
+	}
+	
+	
+	/**
+	 * Get domainNames
+	 *
+	 * @return Array
+	 */
+	public function getDomainNames()
+	{
+		return $this->domainNames;
+	}
 
 	/**
 	 * Set domainNames
 	 *
-	 * @param  string $domainNames
+	 * @param  Array $domainNames
 	 * @return Organization
 	 */
 	public function setDomainNames($domainNames)
@@ -146,19 +221,19 @@ trait OrganizationDefinition
 		$this->domainNames = $domainNames;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get domainNames
+	 * Get details
 	 *
 	 * @return string
 	 */
-	public function getDomainNames()
+	public function getDetails()
 	{
-		return $this->domainNames;
+		return $this->details;
 	}
-
-    
 
 	/**
 	 * Set details
@@ -171,19 +246,19 @@ trait OrganizationDefinition
 		$this->details = $details;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get details
+	 * Get notes
 	 *
 	 * @return string
 	 */
-	public function getDetails()
+	public function getNotes()
 	{
-		return $this->details;
+		return $this->notes;
 	}
-
-    
 
 	/**
 	 * Set notes
@@ -196,19 +271,19 @@ trait OrganizationDefinition
 		$this->notes = $notes;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get notes
+	 * Get groupId
 	 *
-	 * @return string
+	 * @return integer
 	 */
-	public function getNotes()
+	public function getGroupId()
 	{
-		return $this->notes;
+		return $this->groupId;
 	}
-
-    
 
 	/**
 	 * Set groupId
@@ -221,24 +296,24 @@ trait OrganizationDefinition
 		$this->groupId = $groupId;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get groupId
+	 * Get sharedTickets
 	 *
-	 * @return integer
+	 * @return blob
 	 */
-	public function getGroupId()
+	public function getSharedTickets()
 	{
-		return $this->groupId;
+		return $this->sharedTickets;
 	}
-
-    
 
 	/**
 	 * Set sharedTickets
 	 *
-	 * @param  integer $sharedTickets
+	 * @param  blob $sharedTickets
 	 * @return Organization
 	 */
 	public function setSharedTickets($sharedTickets)
@@ -246,24 +321,24 @@ trait OrganizationDefinition
 		$this->sharedTickets = $sharedTickets;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get sharedTickets
+	 * Get sharedComments
 	 *
-	 * @return integer
+	 * @return blob
 	 */
-	public function getSharedTickets()
+	public function getSharedComments()
 	{
-		return $this->sharedTickets;
+		return $this->sharedComments;
 	}
-
-    
 
 	/**
 	 * Set sharedComments
 	 *
-	 * @param  integer $sharedComments
+	 * @param  blob $sharedComments
 	 * @return Organization
 	 */
 	public function setSharedComments($sharedComments)
@@ -271,24 +346,46 @@ trait OrganizationDefinition
 		$this->sharedComments = $sharedComments;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get sharedComments
-	 *
-	 * @return integer
+	 * Add elem
+	 * @param mixed $elem
+	 * @return Organization
 	 */
-	public function getSharedComments()
+	public function addTags($elem)
 	{
-		return $this->sharedComments;
+		$this->tags[] = $elem;
+		return $this;
 	}
 
-    
+	/**
+	 * Has elem
+	 * @param mixed $elem
+	 * @return boolean
+	 */
+	public function hasTags($elem)
+	{
+		return in_array($elem, $this->tags);
+	}
+	
+	
+	/**
+	 * Get tags
+	 *
+	 * @return Array
+	 */
+	public function getTags()
+	{
+		return $this->tags;
+	}
 
 	/**
 	 * Set tags
 	 *
-	 * @param  string $tags
+	 * @param  Array $tags
 	 * @return Organization
 	 */
 	public function setTags($tags)
@@ -296,24 +393,24 @@ trait OrganizationDefinition
 		$this->tags = $tags;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get tags
+	 * Get organizationFields
 	 *
-	 * @return string
+	 * @return Object
 	 */
-	public function getTags()
+	public function getOrganizationFields()
 	{
-		return $this->tags;
+		return $this->organizationFields;
 	}
-
-    
 
 	/**
 	 * Set organizationFields
 	 *
-	 * @param  string $organizationFields
+	 * @param  Object $organizationFields
 	 * @return Organization
 	 */
 	public function setOrganizationFields($organizationFields)
@@ -321,19 +418,19 @@ trait OrganizationDefinition
 		$this->organizationFields = $organizationFields;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get organizationFields
+	 * Get id
 	 *
-	 * @return string
+	 * @return integer
 	 */
-	public function getOrganizationFields()
+	public function getId()
 	{
-		return $this->organizationFields;
+		return $this->id;
 	}
-
-    
 
 	/**
 	 * Set id
@@ -346,19 +443,19 @@ trait OrganizationDefinition
 		$this->id = $id;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get id
+	 * Get url
 	 *
-	 * @return integer
+	 * @return string
 	 */
-	public function getId()
+	public function getUrl()
 	{
-		return $this->id;
+		return $this->url;
 	}
-
-    
 
 	/**
 	 * Set url
@@ -371,19 +468,19 @@ trait OrganizationDefinition
 		$this->url = $url;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get url
+	 * Get externalId
 	 *
 	 * @return string
 	 */
-	public function getUrl()
+	public function getExternalId()
 	{
-		return $this->url;
+		return $this->externalId;
 	}
-
-    
 
 	/**
 	 * Set externalId
@@ -396,19 +493,19 @@ trait OrganizationDefinition
 		$this->externalId = $externalId;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get externalId
+	 * Get name
 	 *
 	 * @return string
 	 */
-	public function getExternalId()
+	public function getName()
 	{
-		return $this->externalId;
+		return $this->name;
 	}
-
-    
 
 	/**
 	 * Set name
@@ -421,19 +518,19 @@ trait OrganizationDefinition
 		$this->name = $name;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
-	 * Get name
+	 * Get createdAt
 	 *
-	 * @return string
+	 * @return datetime
 	 */
-	public function getName()
+	public function getCreatedAt()
 	{
-		return $this->name;
+		return $this->createdAt;
 	}
-
-    
 
 	/**
 	 * Set createdAt
@@ -446,16 +543,5 @@ trait OrganizationDefinition
 		$this->createdAt = $createdAt;
 		
 		return $this;
-	}
-	
-	/**
-	 * Get createdAt
-	 *
-	 * @return datetime
-	 */
-	public function getCreatedAt()
-	{
-		return $this->createdAt;
-	}
-
+	}	
 }

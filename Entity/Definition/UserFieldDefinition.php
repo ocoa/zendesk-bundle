@@ -6,10 +6,10 @@
 namespace ZendeskBundle\Entity\Definition;
 
 /**
- * Definition class for the User connector object
+ * Definition class for the UserField connector object
  *
  */
-trait UserDefinition
+trait UserFieldDefinition
 {    
 
 	 /**
@@ -17,125 +17,161 @@ trait UserDefinition
 	 *
 	 
 	 */
-	private $key;    
+	
+	private $key;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $type;    
+	
+	private $type;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $title;    
+	
+	private $title;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $rawTitle;    
+	
+	private $rawTitle;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $description;    
+	
+	private $description;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $rawDescription;    
+	
+	private $rawDescription;
+	
+    
 
 	 /**
 	 * @var integer
 	 *
 	 
 	 */
-	private $position;    
+	
+	private $position;
+	
+    
 
 	 /**
-	 * @var integer
+	 * @var blob
 	 *
 	 
 	 */
-	private $active;    
+	
+	private $active;
+	
+    
 
 	 /**
-	 * @var integer
+	 * @var blob
 	 *
 	 
 	 */
-	private $system;    
+	
+	private $system;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $regexpForValidation;    
+	
+	private $regexpForValidation;
+	
+    
 
 	 /**
 	 * @var datetime
 	 *
 	 
 	 */
-	private $createdAt;    
+	
+	private $createdAt;
+	
+    
 
 	 /**
 	 * @var datetime
 	 *
 	 
 	 */
-	private $updatedAt;    
+	
+	private $updatedAt;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $tag;    
+	
+	private $tag;
+	
+    
 
 	 /**
-	 * @var string
+	 * @var Array
 	 *
 	 
 	 */
-	private $customFieldOptions;    
+	
+	private $customFieldOptions;
+	
+    
 
 	 /**
 	 * @var integer
 	 *
 	 
 	 */
-	private $id;    
+	
+	private $id;
+	
+    
 
 	 /**
 	 * @var string
 	 *
 	 
 	 */
-	private $url;    
+	
+	private $url;
+	
+    
 
-	/**
-	 * Set key
-	 *
-	 * @param  string $key
-	 * @return User
-	 */
-	public function setKey($key)
-	{
-		$this->key = $key;
-		
-		return $this;
-	}
 	
 	/**
 	 * Get key
@@ -147,20 +183,20 @@ trait UserDefinition
 		return $this->key;
 	}
 
-    
-
 	/**
-	 * Set type
+	 * Set key
 	 *
-	 * @param  string $type
-	 * @return User
+	 * @param  string $key
+	 * @return UserField
 	 */
-	public function setType($type)
+	public function setKey($key)
 	{
-		$this->type = $type;
+		$this->key = $key;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
 	 * Get type
@@ -172,20 +208,20 @@ trait UserDefinition
 		return $this->type;
 	}
 
-    
-
 	/**
-	 * Set title
+	 * Set type
 	 *
-	 * @param  string $title
-	 * @return User
+	 * @param  string $type
+	 * @return UserField
 	 */
-	public function setTitle($title)
+	public function setType($type)
 	{
-		$this->title = $title;
+		$this->type = $type;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
 	 * Get title
@@ -197,20 +233,20 @@ trait UserDefinition
 		return $this->title;
 	}
 
-    
-
 	/**
-	 * Set rawTitle
+	 * Set title
 	 *
-	 * @param  string $rawTitle
-	 * @return User
+	 * @param  string $title
+	 * @return UserField
 	 */
-	public function setRawTitle($rawTitle)
+	public function setTitle($title)
 	{
-		$this->rawTitle = $rawTitle;
+		$this->title = $title;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
 	 * Get rawTitle
@@ -222,20 +258,20 @@ trait UserDefinition
 		return $this->rawTitle;
 	}
 
-    
-
 	/**
-	 * Set description
+	 * Set rawTitle
 	 *
-	 * @param  string $description
-	 * @return User
+	 * @param  string $rawTitle
+	 * @return UserField
 	 */
-	public function setDescription($description)
+	public function setRawTitle($rawTitle)
 	{
-		$this->description = $description;
+		$this->rawTitle = $rawTitle;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
 	 * Get description
@@ -247,20 +283,20 @@ trait UserDefinition
 		return $this->description;
 	}
 
-    
-
 	/**
-	 * Set rawDescription
+	 * Set description
 	 *
-	 * @param  string $rawDescription
-	 * @return User
+	 * @param  string $description
+	 * @return UserField
 	 */
-	public function setRawDescription($rawDescription)
+	public function setDescription($description)
 	{
-		$this->rawDescription = $rawDescription;
+		$this->description = $description;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
 	 * Get rawDescription
@@ -272,20 +308,20 @@ trait UserDefinition
 		return $this->rawDescription;
 	}
 
-    
-
 	/**
-	 * Set position
+	 * Set rawDescription
 	 *
-	 * @param  integer $position
-	 * @return User
+	 * @param  string $rawDescription
+	 * @return UserField
 	 */
-	public function setPosition($position)
+	public function setRawDescription($rawDescription)
 	{
-		$this->position = $position;
+		$this->rawDescription = $rawDescription;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
 	 * Get position
@@ -297,70 +333,70 @@ trait UserDefinition
 		return $this->position;
 	}
 
-    
-
 	/**
-	 * Set active
+	 * Set position
 	 *
-	 * @param  integer $active
-	 * @return User
+	 * @param  integer $position
+	 * @return UserField
 	 */
-	public function setActive($active)
+	public function setPosition($position)
 	{
-		$this->active = $active;
+		$this->position = $position;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
 	 * Get active
 	 *
-	 * @return integer
+	 * @return blob
 	 */
 	public function getActive()
 	{
 		return $this->active;
 	}
 
-    
-
 	/**
-	 * Set system
+	 * Set active
 	 *
-	 * @param  integer $system
-	 * @return User
+	 * @param  blob $active
+	 * @return UserField
 	 */
-	public function setSystem($system)
+	public function setActive($active)
 	{
-		$this->system = $system;
+		$this->active = $active;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
 	 * Get system
 	 *
-	 * @return integer
+	 * @return blob
 	 */
 	public function getSystem()
 	{
 		return $this->system;
 	}
 
-    
-
 	/**
-	 * Set regexpForValidation
+	 * Set system
 	 *
-	 * @param  string $regexpForValidation
-	 * @return User
+	 * @param  blob $system
+	 * @return UserField
 	 */
-	public function setRegexpForValidation($regexpForValidation)
+	public function setSystem($system)
 	{
-		$this->regexpForValidation = $regexpForValidation;
+		$this->system = $system;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
 	 * Get regexpForValidation
@@ -372,20 +408,20 @@ trait UserDefinition
 		return $this->regexpForValidation;
 	}
 
-    
-
 	/**
-	 * Set createdAt
+	 * Set regexpForValidation
 	 *
-	 * @param  datetime $createdAt
-	 * @return User
+	 * @param  string $regexpForValidation
+	 * @return UserField
 	 */
-	public function setCreatedAt($createdAt)
+	public function setRegexpForValidation($regexpForValidation)
 	{
-		$this->createdAt = $createdAt;
+		$this->regexpForValidation = $regexpForValidation;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
 	 * Get createdAt
@@ -397,20 +433,20 @@ trait UserDefinition
 		return $this->createdAt;
 	}
 
-    
-
 	/**
-	 * Set updatedAt
+	 * Set createdAt
 	 *
-	 * @param  datetime $updatedAt
-	 * @return User
+	 * @param  datetime $createdAt
+	 * @return UserField
 	 */
-	public function setUpdatedAt($updatedAt)
+	public function setCreatedAt($createdAt)
 	{
-		$this->updatedAt = $updatedAt;
+		$this->createdAt = $createdAt;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
 	 * Get updatedAt
@@ -422,20 +458,20 @@ trait UserDefinition
 		return $this->updatedAt;
 	}
 
-    
-
 	/**
-	 * Set tag
+	 * Set updatedAt
 	 *
-	 * @param  string $tag
-	 * @return User
+	 * @param  datetime $updatedAt
+	 * @return UserField
 	 */
-	public function setTag($tag)
+	public function setUpdatedAt($updatedAt)
 	{
-		$this->tag = $tag;
+		$this->updatedAt = $updatedAt;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
 	 * Get tag
@@ -447,45 +483,67 @@ trait UserDefinition
 		return $this->tag;
 	}
 
-    
-
 	/**
-	 * Set customFieldOptions
+	 * Set tag
 	 *
-	 * @param  string $customFieldOptions
-	 * @return User
+	 * @param  string $tag
+	 * @return UserField
 	 */
-	public function setCustomFieldOptions($customFieldOptions)
+	public function setTag($tag)
 	{
-		$this->customFieldOptions = $customFieldOptions;
+		$this->tag = $tag;
 		
 		return $this;
+	}	
+    
+
+	
+	/**
+	 * Add elem
+	 * @param mixed $elem
+	 * @return UserField
+	 */
+	public function addCustomFieldOptions($elem)
+	{
+		$this->customFieldOptions[] = $elem;
+		return $this;
 	}
+
+	/**
+	 * Has elem
+	 * @param mixed $elem
+	 * @return boolean
+	 */
+	public function hasCustomFieldOptions($elem)
+	{
+		return in_array($elem, $this->customFieldOptions);
+	}
+	
 	
 	/**
 	 * Get customFieldOptions
 	 *
-	 * @return string
+	 * @return Array
 	 */
 	public function getCustomFieldOptions()
 	{
 		return $this->customFieldOptions;
 	}
 
-    
-
 	/**
-	 * Set id
+	 * Set customFieldOptions
 	 *
-	 * @param  integer $id
-	 * @return User
+	 * @param  Array $customFieldOptions
+	 * @return UserField
 	 */
-	public function setId($id)
+	public function setCustomFieldOptions($customFieldOptions)
 	{
-		$this->id = $id;
+		$this->customFieldOptions = $customFieldOptions;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
 	 * Get id
@@ -497,20 +555,20 @@ trait UserDefinition
 		return $this->id;
 	}
 
-    
-
 	/**
-	 * Set url
+	 * Set id
 	 *
-	 * @param  string $url
-	 * @return User
+	 * @param  integer $id
+	 * @return UserField
 	 */
-	public function setUrl($url)
+	public function setId($id)
 	{
-		$this->url = $url;
+		$this->id = $id;
 		
 		return $this;
-	}
+	}	
+    
+
 	
 	/**
 	 * Get url
@@ -522,4 +580,16 @@ trait UserDefinition
 		return $this->url;
 	}
 
+	/**
+	 * Set url
+	 *
+	 * @param  string $url
+	 * @return UserField
+	 */
+	public function setUrl($url)
+	{
+		$this->url = $url;
+		
+		return $this;
+	}	
 }
