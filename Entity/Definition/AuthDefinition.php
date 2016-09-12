@@ -12,96 +12,206 @@ namespace ZendeskBundle\Entity\Definition;
 trait AuthDefinition
 {    
 
+	 /**
+	 * @var string
+	 *
+	 
+	 */
+	
+	private $emailAddress; 
 
-	private $emailAddress;    
+    
 
 
-	private $token;    
+	 /**
+	 * @var string
+	 *
+	 
+	 */
+	
+	private $token;  
+	
+    
 
-
+	 /**
+	 * @var integer
+	 *
+	 
+	 */
+	
 	private $password;    
+	
+    
 
-
+	 /**
+	 * @var string
+	 *
+	 
+	 */
+	
 	private $subDomain;    
+	
+    
 
-
+	 /**
+	 * @var string
+	 *
+	 
+	 */
+	
 	private $endPoint;    
+	
+    
 
-
+	 /**
+	 * @var integer
+	 *
+	 
+	 */
+	
 	private $portNUmber;    
+	
+    
 
+
+	/**
+	 * Set emailAddress
+	 *
+	 * @param  string $emailAddress
+	 * @return Auth
+	 */
 	public function setEmailAddress($emailAddress)
 	{
 		$this->emailAddress = $emailAddress;
 		
 		return $this;
 	}
-	
+
+	/**
+	 * Get emailAddress
+	 *
+	 * @return string
+	 */
 	public function getEmailAddress()
 	{
 		return $this->emailAddress;
 	}
     
 
+	/**
+	 * Set token
+	 *
+	 * @param  string $token
+	 * @return Auth
+	 */
 	public function setToken($token)
 	{
 		$this->token = $token;
 		
 		return $this;
 	}
-	
+
+	/**
+	 * Get token
+	 *
+	 * @return string
+	 */
 	public function getToken()
 	{
 		return $this->token;
 	}
     
 
+	/**
+	 * Set password
+	 *
+	 * @param  string $password
+	 * @return Auth
+	 */
 	public function setPassword($password)
 	{
 		$this->password = $password;
 		
 		return $this;
 	}
-	
+
+	/**
+	 * Get password
+	 *
+	 * @return string
+	 */
 	public function getPassword()
 	{
 		return $this->password;
 	}
     
 
+	/**
+	 * Set subDomain
+	 *
+	 * @param  string $subDomain
+	 * @return Auth
+	 */
 	public function setSubDomain($subDomain)
 	{
 		$this->subDomain = $subDomain;
 		
 		return $this;
 	}
-	
+
+	/**
+	 * Get subDomain
+	 *
+	 * @return string
+	 */
 	public function getSubDomain()
 	{
 		return $this->subDomain;
 	}
     
 
+	/**
+	 * Set endPoint
+	 *
+	 * @param  string $endPoint
+	 * @return Auth
+	 */
 	public function setEndPoint($endPoint)
 	{
 		$this->endPoint = $endPoint;
 		
 		return $this;
 	}
-	
+
+	/**
+	 * Get endPoint
+	 *
+	 * @return string
+	 */
 	public function getEndPoint()
 	{
 		return $this->endPoint;
 	}
     
 
+	/**
+	 * Set portNUmber
+	 *
+	 * @param  string $portNUmber
+	 * @return Auth
+	 */
 	public function setPortNUmber($portNUmber)
 	{
 		$this->portNUmber = $portNUmber;
 		
 		return $this;
 	}
-	
+
+	/**
+	 * Get portNUmber
+	 *
+	 * @return string
+	 */
 	public function getPortNUmber()
 	{
 		return $this->portNUmber;

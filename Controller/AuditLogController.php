@@ -55,10 +55,3 @@ class AuditLogController extends ControllerAbstract
     }
 
 }
-   }
-
-}
-
-   }
-
-}

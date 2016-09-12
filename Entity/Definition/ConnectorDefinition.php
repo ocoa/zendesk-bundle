@@ -10,4 +10,106 @@ namespace ZendeskBundle\Entity\Definition;
  *
  */
 trait ConnectorDefinition
-{}
+{
+
+	/**
+	 * @var integer
+	 *
+	 
+	 */
+	
+	private $id; 
+
+
+
+	/**
+	 * @var Object
+	 *
+	 
+	 */
+	
+	private $auth;  
+
+
+	/**
+	 * @var string
+	 *
+	 
+	 */
+	
+	private $method;  
+	
+    
+
+	/**
+	 * Set id
+	 *
+	 * @param  integer $id
+	 * @return Connector
+	 */
+	public function setId($id)
+	{
+		$this->id = $id;
+		
+		return $this;
+	}
+
+	/**
+	 * Get id
+	 *
+	 * @return string
+	 */
+	public function getId()
+	{
+		return $this->id;
+	}
+
+
+
+	/**
+	 * Set auth
+	 *
+	 * @param  Object $auth
+	 * @return Connector
+	 */
+	public function setAuth($auth)
+	{
+		$this->auth = $auth;
+		
+		return $this;
+	}
+
+	/**
+	 * Get auth
+	 *
+	 * @return Object
+	 */
+	public function getAuth()
+	{
+		return $this->auth;
+	}
+
+
+	/**
+	 * Set method
+	 *
+	 * @param  string $method
+	 * @return Connector
+	 */
+	public function setMethod($method)
+	{
+		$this->method = $method;
+		
+		return $this;
+	}
+
+	/**
+	 * Get method
+	 *
+	 * @return string
+	 */
+	public function getMethod()
+	{
+		return $this->method;
+	}
+}

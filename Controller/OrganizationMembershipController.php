@@ -55,10 +55,3 @@ class OrganizationMembershipController extends ControllerAbstract
     }
 
 }
-   }
-
-}
-
-   }
-
-}

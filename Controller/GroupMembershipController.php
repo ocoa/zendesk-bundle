@@ -55,10 +55,3 @@ class GroupMembershipController extends ControllerAbstract
     }
 
 }
-   }
-
-}
-
-   }
-
-}

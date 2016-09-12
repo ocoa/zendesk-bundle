@@ -2,7 +2,7 @@
 
 namespace ZendeskBundle\Controller;
 
-use ZendeskBundle\Entity\Request;
+use ZendeskBundle\Entity\Request as ZDRequest;
 
 use ZendeskBundle\Utils\ControllerAbstract;
 use ZendeskBundle\Utils\EntityHandling;
@@ -19,7 +19,7 @@ class RequestController extends ControllerAbstract
      */
     public function addRequestAction(Request $request)
     {    
-        $object = new Request();
+        $object = new ZDRequest();
         $object = $object->persist();
         $data = $this->convertEntity($object);
         return $this->createJsonResponse($data);
@@ -30,7 +30,7 @@ class RequestController extends ControllerAbstract
     */
     public function readRequestAction($id)
     {
-        $object = new Request($id);
+        $object = new ZDRequest($id);
         $data = $this->convertEntity($object);
         return $this->createJsonResponse($data);
     }
@@ -48,7 +48,7 @@ class RequestController extends ControllerAbstract
     */
     public function deleteRequestAction($ticket_id)
     {
-        $object = new Request($id);
+        $object = new ZDRequest($id);
         $object->remove();
         $object->persist();  
         return $this->createJsonResponse(1);     
